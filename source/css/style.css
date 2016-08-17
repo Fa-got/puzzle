@@ -1,0 +1,382 @@
+@charset "utf-8";
+@import url("fonts/fonts.css");
+
+html, body{
+	margin:0;
+	padding: 0;
+	width: 3840px;
+    height: 2160px;
+}
+body{
+	
+	overflow: hidden;
+}
+.clearfix{
+	clear: both;
+}
+.none{
+	display: none;
+}
+div#puzzle{
+	margin: 0;
+    padding: 0;
+    width: 3840px;
+    height: 2160px;
+}
+
+/*Интро*/
+div#puzzle > article.intro{
+	width: inherit;
+	height: inherit;
+	background: url(../img/bg-hand.png) 50% 50% no-repeat;
+}
+div#puzzle > article.intro > img.menu{
+	margin: 0 50%;
+}
+
+div#puzzle > article.intro > img.head{
+	margin: -1% 31%;
+}
+
+div#puzzle > article.intro h1{
+	margin: 80px 0 0 940px;
+	font-size: 100px;
+	font-family: 'Georgia-Italic';
+}
+div#puzzle > article.intro > div.button{
+	width: 720px;
+	height: 600px;
+	float: left;
+	margin: 60px 0 0 0px;
+	background:url(../img/elements/button-border.png) 50% 50% no-repeat;
+	display: flex;
+}
+div#puzzle > article.intro > div.button:nth-child(5),
+div#puzzle > article.intro > div.button:nth-child(6){
+	color:#9a9a9a;
+}
+div#puzzle > article.intro > div.button:nth-child(4){
+	margin-left: 940px;
+}
+div#puzzle > article.intro > div.button p{
+	font-size: 100px;
+	text-align: center;
+    margin: auto;
+	font-family: 'WoodenShipDecorated';
+}
+
+/*game for one*/
+div#puzzle > section.game-for-one {
+	width: inherit;
+	height: inherit;
+	background: url(../img/bg.png) 50% 50% no-repeat;
+
+}
+div#puzzle > section > img.menu{
+	margin: 0 50%; 
+}
+div#puzzle > section.game-for-one > img.menu:hover{
+	
+}
+div#puzzle > section.game-for-one > h1,
+div#puzzle > section.game-for-one > h2{
+	font: normal 80px 'WoodenShipDecorated' ;
+	text-align: center;
+}
+div#puzzle > section.game-for-one > aside.slider{
+	width: 3840px;
+	height: 960px;
+	background: #3a322f;
+	margin: 30px 0 0 0;
+	padding: 0 0 0 0px;
+	overflow: hidden;
+}
+div#puzzle > section.game-for-one > aside.slider img.arow-left{
+	float: left;
+	margin: 450px 0 0 0;
+}
+div#puzzle > section.game-for-one > aside.slider div.arrow-left{
+	 position: relative; 
+     height: inherit; 
+    width: 75px;
+     background: #3a322f;
+     float: left;
+     z-index: 100;
+}
+div#puzzle > section.game-for-one > aside.slider div.arrow-right{
+	 position: relative; 
+     height: inherit; 
+    width: 75px;
+     background: #3a322f;
+     float: right;
+     z-index: 100;
+}
+div#puzzle > section.game-for-one > aside.slider img.arow-right{
+	float: right;
+	margin: 450px 20px 0 0;
+}
+div#puzzle > section.game-for-one > aside.slider img.arow-left{
+	float: left;
+	margin: 450px  0 0 20px;
+}
+div#puzzle > section.game-for-one > aside.slider div.slider-img{
+	width: 538px;
+	height: 386px;
+	margin: 60px 0 0 60px;
+	/*outline: 1px solid black;*/
+	float: left;
+	display: flex;
+}
+
+div#puzzle > section.game-for-one > aside.slider div.slide-wraper{
+	height: inherit;
+	width: 4300px;
+	position: absolute;
+}
+div#puzzle > section.game-for-one > aside.slider  div.slider-img img.puzzle-img{
+	height: 100%;
+	margin: auto;
+}
+div#puzzle > section.game-for-one > aside.slider  div.slider-img img.choise{
+	position: absolute;
+	height: 40%;
+}
+div#puzzle > section.game-for-one > ul.complexity{
+	width: 3745px;
+	height: 240px;
+	margin: auto;
+}
+div#puzzle > section.game-for-one > ul.complexity> li{
+	width: 240px;
+    height: 240px;
+    float: left;
+    margin: 0 0 0 90px;
+    font: normal 100px 'WoodenShipDecorated';
+    color: #fffaed;
+    background: url(../img/elements/button.png) 50% 50% no-repeat;
+    text-align: center;
+    list-style: none;
+    padding: 50px 0 0 0;
+    box-sizing: border-box;
+}
+div#puzzle > section.game-for-one > ul.complexity > li.active{
+	background:url(../img/elements/button-active.png) 50% 50% no-repeat;
+	color: #1E1D19;
+}
+div#puzzle > section.game-for-one > ul.complexity > li:first-child{
+	margin: 0 0 0 253px;
+}
+
+div#puzzle > section.game-for-one div.game-button{
+	margin: 124px 1560px;
+	width: 720px;
+	height: 200px;
+	background: url(../img/elements/game-button.png) 100% 100% no-repeat;
+	font: normal 140px 'WoodenShipDecorated';
+	color: #FFFBEE;
+	text-align: center;
+	padding: 40px 0 0 0;
+}
+div#puzzle > section.game-for-one div.game-button:hover{
+	background: url(../img/elements/game-button-active.png) 100% 100% no-repeat;
+	color: #3A322F;
+}
+/*--------Game---------*/
+section.game{
+	width: 3640px;
+    height: inherit;
+    background: url(../img/bg.png) 50% 50% no-repeat;
+    padding: 0 100px;
+}
+ section.game > div.img-icon{
+	width: 400px;
+    height: 280px;
+    /*outline: 1px solid #000;*/
+    float: left;
+    display: flex;
+}
+section.game > div.img-icon img {
+	height:100%;
+	margin:auto;
+}
+section.game > h1 {
+	    font: normal 200px 'WoodenShipDecorated';
+    margin: 0 0 0 100px;
+    float: left;
+}
+section.game > h1 > span{
+	font-size: 100px;
+} 
+
+section.game > h2.time{
+	float: right;
+    font: normal 200px 'WoodenShipDecorated';
+    margin: 0;
+}
+
+section.game > div.puzzle-area{
+	width: 2400px;
+    height: 1500px;
+    float: left;
+    margin: 30px 0 0 230px;
+}
+
+section.game > nav > div{
+	width: 420px;
+    height: 200px;
+    float: left;
+    margin: 9px 0 0 120px;
+    background:url(../img/elements/puzzle-button.png);
+    font: normal 50px 'WoodenShipDecorated';
+    text-align: center;
+	padding: 40px 0 0 0;
+
+}
+/*section.game > nav > div:hover{
+background:url(../img/elements/puzzle-button-active.png);
+
+}*/
+section.game > nav > div:first-child{
+	    margin-left: 540px;
+}
+section.game > nav > div > a{
+    text-decoration: none;
+	margin: 40px 0 0 0;
+	color: #fffaed;
+	text-align: center;
+	padding: 50px 0px;
+}
+
+/*section.game > nav > div >a:hover {
+color:#3A322F;
+ }*/
+
+
+/*== Jigsaw puzzle ==*/
+
+.hide { display: none; }
+
+.clear { clear: both; }
+
+
+div#canvas-wrap {
+     width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+canvas#canvas, canvas#buffer, canvas#image-preview {
+    position: absolute;
+    top: 412px;
+    left: 729px;
+}
+canvas#image-preview {
+    top: 30px;
+}
+
+canvas#canvas { z-index: -1; }
+
+canvas#canvas.loading { background: url(../img/elements/loader.gif) no-repeat center; }
+
+canvas#buffer { z-index: 70; }
+
+canvas#image-preview.show {
+    left: 50%;
+    top: 22%;
+    opacity: .6;
+}
+
+/* modal window */
+div#modal-window {
+    top: -2px;
+    left: 0;
+    background: #fefefe;
+    padding: 10px 20px;
+    box-shadow: 0 0 10px #333;
+    -webkit-transition: top .4s ease-in-out;
+    -moz-transition: top .4s linear;
+    -o-transition: top .4s linear;
+    -ms-transition: top .4s linear;
+    transition: top .4s linear;
+    color: #333;
+     width: 3840px;
+    height: 2160px;
+    background: url(../img/bg.png);
+    text-align: center;
+    position: absolute;
+    z-index: 1000;
+}
+div#modal-window h1{
+	 font: normal 150px 'WoodenShipDecorated';
+	 margin: 200px 0 50px 0;
+}
+div#modal-window h2,
+div#modal-window h3 {
+	text-align: center;
+	margin-bottom: 5px; 
+	 font: normal 80px 'WoodenShipDecorated';
+	 margin:0;
+}
+
+ div#modal-window  div.img-icon  {
+    height: 400px;
+    display: flex;
+    margin: 60px 0 0 0;
+}
+div#modal-window  div.img-icon img{
+	height:100%;
+	margin:auto;
+}
+
+div#modal-window img.menu{
+	margin: -7px auto;
+}
+
+/* close button */
+  /*div#modal-window .button {
+  float: right;
+    margin: 3px 0;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 4px 10px 4px;
+    color: #333333;
+    text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+    background-color: #ffffff;
+    background-image: -ms-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -o-linear-gradient(top, #ffffff, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #ffffff, #e6e6e6);
+    border: 1px solid #cccccc;
+    border-color: #e6e6e6 #e6e6e6 #e6e6e6;
+    border-bottom-color: #e6e6e6;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#e6e6e6', GradientType=0);
+    filter: progid:dximagetransform.microsoft.gradient(enabled=false);
+    -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+
+ }*/
+/* overlay */
+div#overlay {
+    position: absolute;
+    background: #000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: alpha(opacity=50);
+    opacity: .5;
+    z-index: 500;
+    cursor: pointer;
+}
+
+div#overlay.hide { display: none; }
+
+
+
+

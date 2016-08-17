@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="source/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+	<div id="puzzle">
+		<article class="intro">
+			<img class="menu" src="source/img/elements/menu.png">
+			<img class="head" src="source/img/elements/Head.png">
+			<h1>"Не желаете ли разложить пузеля, господа?" </h1>
+			<div class="button"><p>Одиночная<br>игра</p></div>
+			<div class="button"><p>Дуэль</p></div>
+			<div class="button"><p>Два<br>стола</p></div>
+		</article>
+		<section class="game-for-one none">
+			<img class="menu" src="source/img/elements/menu-one.png">
+			<h1 >"Какой изъ пузелей Вы предпочитаете разложить?"</h1>
+			<aside class="slider">
+
+				<div class="arrow-left"><img class="arow-left" src="source/img/elements/arow-left.png" ></div>
+				<div class="slide-wraper">
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="" src="source/img/puzzle-img/">
+					</div>
+				</div>
+				<div class="arrow-right"><img class="arow-right" src="source/img/elements/arow-right.png" ></div>
+			</aside>
+			<h2 class="none">"Выберите уровень сложности"</h2>
+			<ul  id="set-parts" class="complexity none ">
+			
+			</ul>
+			<div id="game-button" class="game-button none" src="source/img/elements/game-button.png" >Играть</div>
+			<!-- начало игры для одного-->
+		
+		</section>
+
+			<section class="game ">
+				<img class="menu" src="source/img/elements/menu-one.png">
+				<div class="img-icon"><img src="source/img/puzzle-img/11.jpg"></div>
+				<h1 class="complexity"></h1>
+				
+				<h2 id="clock" class="time button">00:00</h2>
+
+				<div class="puzzle-area">
+
+				<div id="canvas-wrap">
+				<canvas id="canvas"></canvas>
+				<canvas class="hide" id="image"></canvas>
+				<canvas class="hide" id="image-preview"></canvas>
+				</div>
+
+				<!-- MODAL WINDOW -->
+				<div class="hide" id="overlay"></div>
+				<div id="modal-window" class="hide">
+				<div id="modal-window-msg"></div>
+				<a class="hide" href="#" id="modal-window-close" class="button">Close</a>
+				</div>
+
+				<!-- CONGRATULATION -->
+				<div id="congrat" class="hide">
+				<img class="menu" src="source/img/elements/menu-one.png">
+				<h1>Поздравляем!</h1>
+				<h2>Вы выиграли. Время <span id="time"></span></h3>
+				<h3>Желаете ли получить заслуженную награду:</h3>
+				<div class="clearfix"></div>
+				<div class="img-icon"><img src="source/img/puzzle-img/11.jpg"></div>
+				<form method="post" class="hide" action="" target="save-score" onsubmit="jigsaw.UI.close_lightbox();">
+				<label>
+				Your Name: <input type="text" name="name" />
+				</label>
+				<input type="submit" value="Save score" />
+				<input type="hidden" id="time-input" name="time"/>
+				</form>
+				</div>
+
+				<!-- CREATE PUZZLE -->
+				<div class="hide" id="create-puzzle">
+				<form id="image-form" id="add-image-form">
+				<input type="file" id="image-input">
+				<p id="image-error"></p>
+				<p id="dnd"><i></i></p>
+				</form>
+				</div>
+
+				
+				<form class="hide" method="post" id="redirect-form">
+				<input type="text" name="time" id="t" />
+				<input type="text" name="parts" id="p" />
+				</form>
+				<!-- <iframe class="hide" src="about:blank" id="save-score" name="save-score"></iframe> -->
+				<!-- SCRIPTS ROMPECABEZAS -->
+				
+				
+				</div>
+				<div class="clearfix"></div>
+				<!-- GAME OPTIONS -->
+				<nav id="game-options" class="">
+		
+				<div><a href="#" id="SHOW_PREVIEW" class="" title="Preview">подсказка</a></div>
+				<div><a href="#" id="SHOW_EDGE" class="" title="Show edge pieces only">только<br>угловые</a></div>
+				<div><a href="#" id="SHOW_MIDDLE" class="" title="Show middle pieces only">только<br>центральные</a></div>
+				<div><a href="#" id="SHOW_ALL" class="" title="Show all pieces">показать<br>все</a></div>	
+				<div id="create"><a href="#" id="JIGSAW_SHUFFLE" class="" title="Shuffle">перемешать<br>пузели</a></div>
+				</nav>
+
+			</section>
+	</div>
+
+</body>
+	<script src="source/js/lib/jquery-2.2.4.min.js"></script>
+	<script src="source/js/lib/easingPlugin.js"></script>
+	<script src="source/js/lib/jquery-ui.min.js"></script>
+	<script src="source/js/lib/hammer.min.js"></script>
+	
+	<script src="source/js/main.js"></script>
+	<!-- <script src="source/js/modules/buttons.js"></script>
+	<script src="source/js/modules/slider.js"></script> -->
+
+	<script src="source/js/modules/event-emiter.min.js"></script>
+	<script src="source/js/modules/canvas-event.min.js"></script>
+	<script src="source/js/modules/canvas-puzzle.min.js"></script>
+	
+
+	<!-- <script>
+ setTimeout(function() { 
+		
+	}, 6000)
+	</script> -->
+	
+</html>
