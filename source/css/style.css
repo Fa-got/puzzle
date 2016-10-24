@@ -1,0 +1,829 @@
+@charset "utf-8";
+@import url("fonts/fonts.css");
+
+html, body{
+	margin:0;
+	padding: 0;
+	width: 1920px;
+    height: 1080px;
+}
+body{
+	
+	overflow: hidden;
+}
+.clearfix{
+	clear: both;
+}
+.none{
+	display: none;
+}
+div#puzzle{
+	margin: 0;
+    padding: 0;
+    width:1920px;
+    height: 1080px;
+}
+
+/*Интро*/
+div#puzzle > article.intro{
+	width: inherit;
+	height: inherit;
+	background: url(../img/bg-hand.png) 50% 50% no-repeat;
+}
+div#puzzle > article.intro > img.menu{
+	margin: 0 50%;
+    opacity: 0;
+}
+
+div#puzzle > article.intro > img.head{
+	margin: -1% 31%;
+}
+
+div#puzzle > article.intro h1{
+	margin: 40px 0 0 470px;
+	font-size: 50px;
+	font-family: 'Georgia-Italic';
+}
+div#puzzle > article.intro > div.button{
+	width: 360px;
+	height: 300px;
+	float: left;
+	margin: 30px 0 0 0px;
+	background:url(../img/elements/button-border.png) 50% 50% no-repeat;
+	display: flex;
+}
+/*div#puzzle > article.intro > div.button:nth-child(5),
+div#puzzle > article.intro > div.button:nth-child(6){
+	color:#9a9a9a;
+}*/
+div#puzzle > article.intro > div.button:nth-child(4){
+	margin-left: 470px;
+}
+div#puzzle > article.intro > div.button p{
+	font-size: 50px;
+	text-align: center;
+    margin: auto;
+	font-family: 'WoodenShipDecorated';
+}
+div#puzzle > article.intro > p{
+    margin-left: 570px;
+    font: normal 23px 'Georgia-Italic'; 
+}
+/*---------game for one---------*/
+div#puzzle > section.game-for-one,
+div#puzzle > section.game-duel,
+div#puzzle > section.game-for-two {
+	width: inherit;
+	height: inherit;
+	background: url(../img/bg.png) 50% 50% no-repeat;
+
+}
+div#puzzle  img.menu{
+	margin: 0 915px;
+    opacity: 0;
+}
+div#puzzle > section.game-for-one > img.menu:hover{
+	
+}
+div#puzzle > section.game-duel  h1,
+div#puzzle > section.game-duel  h2,
+div#puzzle > section.game-for-one > h1,
+div#puzzle > section.game-for-one > h2{
+	font: normal 40px 'WoodenShipDecorated' ;
+	text-align: center;
+}
+div#puzzle > section.game-duel  aside.slider-duel,
+div#puzzle > section.game-for-one > aside.slider{
+	width: 1920px;
+	height: 480px;
+	background: #3a322f;
+	margin: 15px 0 0 0;
+	padding: 0 0 0 0px;
+	overflow: hidden;
+}
+div#puzzle > section.game-duel  aside.slider-duel div.arrow-left,
+div#puzzle > section.game-for-one > aside.slider div.arrow-left{
+	 position: relative; 
+     height: inherit; 
+    width: 38px;
+     background: #3a322f;
+     float: left;
+     z-index: 100;
+}
+div#puzzle > section.game-duel  aside.slider-duel div.arrow-right,
+div#puzzle > section.game-for-one > aside.slider div.arrow-right{
+	 position: relative; 
+     height: inherit; 
+    width: 38px;
+     background: #3a322f;
+     float: right;
+     z-index: 100;
+}
+div#puzzle > section.game-duel  aside.slider-duel img.arow-right,
+div#puzzle > section.game-for-one > aside.slider img.arow-right{
+	float: right;
+	margin: 225px 10px 0 0;
+}
+div#puzzle > section.game-duel  aside.slider-duel img.arow-left,
+div#puzzle > section.game-for-one > aside.slider img.arow-left{
+	float: left;
+	margin: 225px  0 0 10px;
+}
+div#puzzle > section.game-duel  aside.slider-duel div.slider-img,
+div#puzzle > section.game-for-one > aside.slider div.slider-img{
+	width: 269px;
+	height: 193px;
+	margin: 30px 0 0 30px;
+	/*outline: 1px solid black;*/
+	float: left;
+	display: flex;
+}
+div#puzzle > section.game-duel  aside.slider-duel div.slide-wraper,
+div#puzzle > section.game-for-one > aside.slider div.slide-wraper{
+	height: inherit;
+	width: 2150px;
+	position: absolute;
+}
+div#puzzle > section.game-duel  aside.slider-duel div.slider-img img.puzzle-img,
+div#puzzle > section.game-for-one > aside.slider  div.slider-img img.puzzle-img{
+	height: 100%;
+	margin: auto;
+}
+div#puzzle > section.game-duel  aside.slider-duel div.slider-img img.choise,
+div#puzzle > section.game-for-one > aside.slider  div.slider-img img.choise{
+	position: absolute;
+	height: 40%;
+}
+div#puzzle > section.game-duel  ul.complexity,
+div#puzzle > section.game-for-one > ul.complexity{
+	width: 1872px;
+	height: 120px;
+	margin: auto;
+}
+
+
+div#puzzle > section.game-duel  ul.complexity> li,
+div#puzzle > section.game-for-one  ul.complexity> li{
+	width: 120px;
+    height: 120px;
+    float: left;
+    margin: 0 0 0 45px;
+    font: normal 50px 'WoodenShipDecorated';
+    color: #fffaed;
+    background: url(../img/elements/button.png) 50% 50% no-repeat;
+    text-align: center;
+    list-style: none;
+    padding: 25px 0 0 0;
+    box-sizing: border-box;
+    /*test animation*/
+    transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+    transition-duration: 1s;
+
+}
+div#puzzle > section.game-duel  ul.complexity > li.active,
+div#puzzle > section.game-for-one  ul.complexity  li.active{
+	background:url(../img/elements/button-active.png) 50% 50% no-repeat;
+	color: #1E1D19;
+}
+div#puzzle > section.game-duel  ul.complexity > li:first-child,
+div#puzzle > section.game-for-one  ul.complexity  li:first-child{
+	margin: 0 0 0 690px;
+}
+div#puzzle > section.game-duel div.game-button-duel,
+div#puzzle > section.game-for-one div.game-button{
+	margin: 62px 780px;
+	width: 360px;
+	height: 100px;
+	background: url(../img/elements/game-button.png) 100% 100% no-repeat;
+	font: normal 70px 'WoodenShipDecorated';
+	color: #FFFBEE;
+	text-align: center;
+	padding: 20px 0 0 0;
+}
+/*div#puzzle > section.game-for-one div.game-button:hover{
+	background: url(../img/elements/game-button-active.png) 100% 100% no-repeat;
+	color: #3A322F;
+}*/
+
+/*Line*/
+div.line-duel,
+div.line{
+    height: 1000px;
+    margin: -24px 0 0 0;
+    width: 6px;
+    float: left;
+    background: rgba(58,50,47,1);
+    background: -moz-linear-gradient(top, rgba(58,50,47,1) 4%, rgba(125,120,118,1) 9%, rgba(246,246,246,1) 18%, rgba(255,255,255,1) 81%, rgba(97,91,89,1) 93%, rgba(58,50,47,1) 96%, rgba(58,50,47,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(4%, rgba(58,50,47,1)), color-stop(9%, rgba(125,120,118,1)), color-stop(18%, rgba(246,246,246,1)), color-stop(81%, rgba(255,255,255,1)), color-stop(93%, rgba(97,91,89,1)), color-stop(96%, rgba(58,50,47,1)), color-stop(100%, rgba(58,50,47,1)));
+    background: -webkit-linear-gradient(top, rgba(58,50,47,1) 4%, rgba(125,120,118,1) 9%, rgba(246,246,246,1) 18%, rgba(255,255,255,1) 81%, rgba(97,91,89,1) 93%, rgba(58,50,47,1) 96%, rgba(58,50,47,1) 100%);
+    background: -o-linear-gradient(top, rgba(58,50,47,1) 4%, rgba(125,120,118,1) 9%, rgba(246,246,246,1) 18%, rgba(255,255,255,1) 81%, rgba(97,91,89,1) 93%, rgba(58,50,47,1) 96%, rgba(58,50,47,1) 100%);
+    background: -ms-linear-gradient(top, rgba(58,50,47,1) 4%, rgba(125,120,118,1) 9%, rgba(246,246,246,1) 18%, rgba(255,255,255,1) 81%, rgba(97,91,89,1) 93%, rgba(58,50,47,1) 96%, rgba(58,50,47,1) 100%);
+    background: linear-gradient(to bottom, rgba(58,50,47,1) 2%, rgba(125,120,118,1) 21%, rgba(246,246,246,1) 34%, rgba(97,91,89,1) 48%, rgba(97,91,89,1) 0%, rgba(58,50,47,1) 100%, rgba(58,50,47,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3a322f', endColorstr='#3a322f', GradientType=0 );
+}
+div.line-duel{
+    margin: 40px 0 0 0;
+}
+
+/*---------game for two---------*/
+div#puzzle > section.game-for-two > div.player-left,
+div#puzzle > section.game-for-two > div.player-right{
+    width: 957px;
+    float: left;
+}
+div#puzzle > section.game-for-two > div.player-left section.player-left-cont > aside.slider-left,
+div#puzzle > section.game-for-two > div.player-right section.player-right-cont > aside.slider-right{
+    width: 957px;
+    height: 480px;
+    background: #3a322f;
+    padding: 0 0 0 0px;
+    overflow: hidden;
+    float: left;
+}
+
+div#puzzle > section.game-for-two > div.player-left section.player-left-cont > aside.slider-left > div.slide-wraper-left,
+div#puzzle > section.game-for-two > div.player-right section.player-right-cont > aside.slider-right > div.slide-wraper-right{
+    width: 900px;
+    height: inherit;
+        float: left;
+}
+div#puzzle > section.game-for-two > div.player-left section.player-left-cont > aside.slider-left div.slider-img-left,
+div#puzzle > section.game-for-two  > div.player-right section.player-right-cont > aside.slider-right div.slider-img-right{
+    width: 269px;
+    height: 193px;
+    margin: 30px 0 0 23px;
+    float: left;
+    display: flex;
+}
+div#puzzle > section.game-for-two > div.player-left section.player-left-cont > aside.slider-left  div.slider-img-left img.puzzle-img-left,
+div#puzzle > section.game-for-two > div.player-right section.player-right-cont > aside.slider-right  div.slider-img-right img.puzzle-img-right{
+    height: 100%;
+    margin: auto;
+}
+div#puzzle > section.game-for-two  > div.player-left section.player-left-cont > aside.slider-left > div.arrow-left,
+div#puzzle > section.game-for-two > div.player-right section.player-right-cont > aside.slider-right > div.arrow-left{
+    position: relative; 
+     height: inherit; 
+    width: 27px;
+     background: #3a322f;
+     float: left;
+     z-index: 100;
+}
+div#puzzle > section.game-for-two > div.player-right section.player-right-cont > aside.slider-right > div.arrow-right{
+     position: absolute; 
+     height: inherit; 
+    width: 27px;
+     background: #3a322f;
+    right: 0%;
+     z-index: 100;
+}
+div#puzzle > section.game-for-two  > div.player-left section.player-left-cont > aside.slider-left > div.arrow-right{
+   position: absolute; 
+     height: inherit; 
+    width: 27px;
+     background: #3a322f;
+    right: 963px;
+     z-index: 100;
+}
+div#puzzle > section.game-for-two > div.player-left section.player-left-cont > aside.slider-left > div.arrow-right > img.arow-right,
+div#puzzle > section.game-for-two > div.player-right section.player-right-cont > aside.slider-right > div.arrow-right > img.arow-right{
+    float: right;
+    margin: 225px 10px 0 0;
+}
+div#puzzle > section.game-for-two > div.player-left section.player-left-cont > aside.slider-left > div.arrow-left > img.arow-left,
+div#puzzle > section.game-for-two > div.player-right section.player-right-cont > aside.slider-right > div.arrow-left > img.arow-left{
+    float: left;
+    margin: 225px  0 0 10px;
+}
+
+div#puzzle > section.game-for-two > div.player-left section.player-left-cont > aside.slider-left  div.slider-img-left img.choise-left,
+div#puzzle > section.game-for-two > div.player-right section.player-right-cont > aside.slider-right  div.slider-img-right img.choise-right{
+    position: absolute;
+    height:40%;
+}
+div#puzzle > section.game-for-two > div.player-left section.player-left-cont > aside.slider-left > div.slide-wraper-left {
+    width: 2370px;
+    position: relative;
+    top: -479px;
+}
+
+div#puzzle > section.game-for-two > div.player-right section.player-right-cont > aside.slider-right > div.slide-wraper-right{
+    width: 2370px;
+    position: relative;
+    top: -479px;
+}
+
+div#puzzle > section.game-for-two section.player-right-cont  h1,
+div#puzzle > section.game-for-two section.player-right-cont h2{
+    font: normal 30px 'WoodenShipDecorated' ;
+    text-align: center;
+}
+
+div#puzzle > section.game-for-two section.player-left-cont  h1,
+div#puzzle > section.game-for-two section.player-left-cont h2{
+    font: normal 30px 'WoodenShipDecorated' ;
+    text-align: center;
+}
+
+
+div#puzzle > section.game-for-two > div.compl-right,
+div#puzzle > section.game-for-two > div.compl-left{
+    width: 930px;
+    height: 275px;
+    /*outline: 1px solid #ccc;*/
+    float: left;
+}
+div#puzzle > section.game-for-two > div.compl-left{
+    margin: 0 0 0px 25px;
+}
+div#puzzle > section.game-for-two  div.compl-arrow-left,
+div#puzzle > section.game-for-two  div.compl-arrow-right{
+    width: 60px;
+    height: 60px;
+
+}
+div#puzzle > section.game-for-two  div.compl-arrow-left{
+    float: left; 
+    margin:50px 0 0 60px;
+}
+div#puzzle > section.game-for-two  div.compl-arrow-right{
+    float: right;
+    margin:50px 60px 0 0;
+}
+div#puzzle > section.game-for-two div.compl-arrow-left > img,
+div#puzzle > section.game-for-two div.compl-arrow-right > img{
+    height: 100%;
+}
+div#puzzle > section.game-for-two > div.player-right div.compl-right > ul,
+div#puzzle > section.game-for-two > div.player-left  div.compl-left > ul{
+    width: 650px;
+    height: 120px;
+    margin: 20px 0 0 0;
+    /*outline: 1px solid #ccc;*/
+    float: left;
+}
+div#puzzle > section.game-for-two > div.player-right  div.compl-right > ul > li,
+div#puzzle > section.game-for-two > div.player-left div.compl-left > ul > li{
+    width: 120px;
+    height: 120px;
+    float: left;
+    margin: 0px 0 0 25px;
+    font: normal 50px 'WoodenShipDecorated';
+    color: #fffaed;
+    background: url(../img/elements/button.png) 50% 50% no-repeat;
+    text-align: center;
+    list-style: none;
+    padding: 25px 0 0 0;
+    box-sizing: border-box;
+        box-sizing: border-box;
+    transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+    transition-duration: 1s;
+}
+div#puzzle > section.game-for-two > div.player-right  div.compl-right > ul > li:nth-child(1),
+div#puzzle > section.game-for-two > div.player-left div.compl-left > ul > li:nth-child(1){
+    margin: 0 0 0 220px;
+}
+div#puzzle > section.game-for-two > div.player-right  div.compl-right > ul > li.active,
+div#puzzle > section.game-for-two > div.player-left div.compl-left > ul > li.active{
+    background:url(../img/elements/button-active.png) 50% 50% no-repeat;
+    color: #1E1D19;
+}
+div#puzzle > section.game-for-two div.game-button-left,
+div#puzzle > section.game-for-two div.game-button-right{
+    margin: 100px 280px;
+    width: 360px;
+    height: 100px;
+    background: url(../img/elements/game-button.png) 100% 100% no-repeat;
+    font: normal 70px 'WoodenShipDecorated';
+    color: #FFFBEE;
+    text-align: center;
+    padding: 20px 0 0 0;
+}
+
+/*--------Game section two-right---------*/
+section.game-duel-right,
+section.game-duel-left{
+    padding-top: 50px;
+}
+
+
+section.game-duel-right,
+section.game-two-right{
+
+    width: 932px;
+    height: inherit;
+    margin: 0 25px 0 0px;
+    float: right;
+}
+section.game-duel-right > div.img-icon-duel-right,
+section.game-duel-left > div.img-icon-duel-left,
+ section.game-two-right  div.img-icon-right,
+ section.game-two-left  div.img-icon-left{
+    width: 200px;
+    height: 140px;
+    float: left;
+    display: flex;
+    margin-left: 50px;
+}
+section.game-duel-right > div.img-icon-duel-right img,
+section.game-duel-left > div.img-icon-duel-left img,
+section.game-two-right  div.img-icon-right img,
+ section.game-two-left  div.img-icon-left img {
+    height:100%;
+    margin:auto;
+}
+section.game-duel-right  h1,
+section.game-two-right  h1 {
+    font: normal 50px 'WoodenShipDecorated' !important;
+    margin: 35px 0 0 30px;
+    float: left;
+}
+section.game-duel-right  h1 > span,
+section.game-two-right > h1 > span{
+    font-size: 50px !important;
+} 
+section.game-duel-right  h2.time-right,
+section.game-duel-left  h2.time-left,
+section.game-two-left  h2.time-left,
+section.game-two-right  h2.time-right{
+    width: 200px;
+    float: right;
+    font: normal 50px 'WoodenShipDecorated' !important;
+    text-align: left !important;
+    margin: 40px 20px 0 0;
+}
+section.game-duel-right  div.puzzle-duel-right,
+section.game-two-right  div.puzzle-area-right{
+    width: 932px;
+    height: 750px;
+    float: left;
+    margin: 15px 0 0 0px;
+}
+section.game-duel-right > nav > div,
+section.game-two-right  nav > div{
+    width: 150px;
+    height: 90px;
+    float: left;
+    margin: 30px 0 0 35px;
+    background-image: url(../img/elements/puzzle-button.png);
+    background-size: 100% 100%;
+    font: normal 21px 'WoodenShipDecorated';
+    text-align: center;
+    padding: 20px 0 0 0;
+     color:white;
+}
+}
+section.game-duel-right > nav > div:first-child,
+section.game-two-right  nav > div:first-child{
+    /*margin-left: 270px;*/
+}
+section.game-duel-right > nav > div > a,
+section.game-two-right  nav > div > a{
+    text-decoration: none;
+    margin: 20px 0 0 0;
+    color: #fffaed;
+    text-align: center;
+    padding: 25px 0px;
+}
+
+
+
+
+
+
+/*--------Game section two-left---------*/
+section.game-duel-left,
+section.game-two-left{
+    width: 932px;
+    height: inherit;
+    float: left;
+    margin: 0 0 0 25px;
+}
+section.game-duel-right > div.img-icon,
+section.game-duel-left > div.img-icon,
+section.game-two-right > div.img-icon,
+ section.game-two-left  div.img-icon{
+    width: 200px;
+    height: 140px;
+    float: left;
+    display: flex;
+    margin-left: 50px;
+}
+section.game-duel-left > div.img-icon img,
+section.game-duel-right > div.img-icon img,
+section.game-two-right > div.img-icon img,
+section.game-two-left  div.img-icon img {
+    height:100%;
+    margin:auto;
+}
+section.game-duel-left  h1,
+section.game-two-left  h1 {
+    font: normal 50px 'WoodenShipDecorated' !important;
+    margin: 35px 0 0 30px;
+    float: left;
+}
+section.game-duel-left  h1 > span,
+section.game-two-left h1 > span{
+    font-size: 50px !important;;
+} 
+section.game-duel-left  h2.time-left,
+section.game-two-left  h2.time{
+    width: 200px;
+    float: left;
+    font: normal 50px 'WoodenShipDecorated';
+    margin: 30px 0 0 140px;
+}
+section.game-duel-left  div.puzzle-duel-left,
+section.game-two-left  div.puzzle-area-left{
+    width: 932px;
+    height: 750px;
+    float: left;
+    margin: 15px 0 0 0px;
+}
+section.game-duel-left > nav > div,
+section.game-two-left  nav > div{
+       width: 150px;
+    height: 90px;
+    float: left;
+    margin: 30px 0 0 35px;
+    background-image: url(../img/elements/puzzle-button.png);
+    background-size: 100% 100%;
+    font: normal 21px 'WoodenShipDecorated';
+    text-align: center;
+    padding: 20px 0 0 0;
+    color:white;
+}
+section.game-duel-left > nav > div:first-child,
+section.game-two-left nav > div:first-child{
+    /*margin-left: 120px;*/
+}
+section.game-duel-left > nav > div > a,
+section.game-two-left  nav > div > a{
+    text-decoration: none;
+    margin: 20px 0 0 0;
+    color: #fffaed;
+    text-align: center;
+    padding: 25px 0px;
+}
+
+
+/*--------Game section one---------*/
+section.game-one{
+	width: 1920px;
+    height: inherit;
+    background: url(../img/bg.png) 50% 50% no-repeat;
+}
+ section.game-one  div.img-icon{
+	width: 200px;
+    height: 140px;
+    float: left;
+    display: flex;
+    margin-left: 50px;
+}
+section.game-one  div.img-icon img {
+	height:100%;
+	margin:auto;
+}
+section.game-one  h1 {
+	font: normal 75px 'WoodenShipDecorated';
+    margin: 20px 0 0 50px;
+    float: left;
+}
+section.game-one  h1 > span{
+	font-size: 75px;
+} 
+
+section.game-one  h2.time{
+	width: 200px;
+    float: right;
+    font: normal 100px 'WoodenShipDecorated';
+    margin: 20px 155px 0 0px;
+}
+
+section.game-one  div.puzzle-area{
+	width: 1450px;
+    height: 750px;
+    margin: 75px auto;
+}
+
+section.game-one  nav > div{
+	width:210px;
+    height: 100px;
+    float: left;
+    margin: 5px 0 0 70px;
+    background:url(../img/elements/puzzle-button.png);
+    font: normal 25px 'WoodenShipDecorated';
+    text-align: center;
+	padding: 20px 0 0 0;
+    color: #fffaed;
+}
+section.game-one  nav > div.active{
+    width:210px;
+    height: 100px;
+    float: left;
+    margin: 5px 0 0 70px;
+    background:url(../img/elements/puzzle-button-active.png);
+    font: normal 25px 'WoodenShipDecorated';
+    text-align: center;
+    padding: 20px 0 0 0;
+    color: #000;
+}
+
+
+section.game-one  nav > div:first-child{
+	margin-left: 270px;
+}
+
+
+ .group{    
+   background: #71baf2; 
+   /*float: left;*/
+   text-align: center;
+   font-size: 20px;
+   position: absolute;  
+}
+
+.piece  {
+   float: left;
+   text-align: center;
+   font-size: 20px;
+   position: absolute;
+   display: flex;
+   /*outline: 1px solid #000;*/
+}
+.piece > img {
+ position: absolute;
+   left: 50%;
+   top: 50%;
+   -webkit-transform: translateY(-50%) translateX(-50%);
+}
+
+.piece > img.g-up{
+  top: -1%;
+  -webkit-transform: translateY(0) translateX(-50%);
+}
+.piece > img.g-down{
+ top: -36%;
+  -webkit-transform: translateY(0) translateX(-50%);
+}
+
+.piece > img.v-l{
+  left:-1%;
+  -webkit-transform: translateY(-50%) translateX(0);
+}
+.piece > img.v-r{
+  left: -36%;;
+  -webkit-transform: translateY(-50%) translateX(0);
+}
+
+nav.duel-nav{
+padding-top: 15px;
+}
+nav.game-options-duel-left > div:first-child,
+nav.game-options-duel-right > div:first-child {
+    margin-left: 120px;
+}
+nav.game-options-duel-left > div.active,
+nav.game-options-duel-right > div.active {
+    background:url(../img/elements/puzzle-button-active.png);
+     color: black;
+     background-size: 100% 100%;
+}
+
+nav.game-options-two-right > div.active,
+nav.game-options-two-left > div.active {
+    background:url(../img/elements/puzzle-button-active.png);
+     color: black;
+     background-size: 100% 100%;
+}
+nav > div.shufl-right:hover{
+    background:url(../img/elements/puzzle-button-active.png);
+     color: black;
+     background-size: 100% 100%;
+}
+div.perv-left,
+div.perv-right,
+div.perv-duel-left,
+div.perv-duel-right,
+ div.perv{
+    width: inherit;
+    height: inherit;
+    opacity: 0.3;
+    background-size: auto 90%;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+}
+/*div.previev  .active{
+     background:url(../img/elements/puzzle-button-active.png);
+     color: black;
+}*/
+div.shufl:hover{
+     background:url(../img/elements/puzzle-button-active.png);
+     color: black;
+}
+.index{
+    z-index: -2 !important;
+}
+
+div.congrat{
+    width: 1920px;
+    height: 1080px;
+    padding-top: 150px;
+    box-sizing: border-box;
+    background: url(../img/bg.png) 50% 50% no-repeat;
+    text-align: center;
+}
+div.congrat h1{
+    font: normal 60px 'WoodenShipDecorated' !important;
+    float: none;
+    margin:0;
+}
+div.congrat h2{
+    font: normal 30px 'WoodenShipDecorated' !important;
+    float: none;
+
+}
+
+div.congrat > div.img-icon{
+    width: 600px;
+    height: 400px;
+    display: flex;
+    margin:auto;
+    float: none;
+}
+
+div.congrat > div.img-icon img{
+    height:100% ;
+    margin:auto ;
+}
+
+.congrat-left,
+.congrat-right{
+    width: inherit;
+    height: inherit;
+    text-align: center;
+} 
+.congrat-left h1,
+.congrat-right h1{
+    float: none  !important;
+}
+.congrat-left h2,
+.congrat-right h2{
+    font: normal 30px 'WoodenShipDecorated' !important;
+    float: none  !important;
+}
+.congrat-left > .img-icon-left,
+.congrat-right > .img-icon-right{
+     width: 600px !important;
+    height: 400px !important;
+    margin-left: 20% !important;
+}
+.congrat-left > .img-icon-left img,
+.congrat-right > .img-icon-right img{
+    height: 100%;
+    margin:auto;
+}
+
+.congrat-duel{
+    padding: 40px 0 0 0 ;
+    position: absolute;
+    background: url(../img/bg.png) 50% 50% no-repeat;
+    z-index: 10;
+    width: 1920px;
+    height: 1080px;
+    box-sizing: border-box;
+}
+.congrat-duel h1{
+     font: normal 60px 'WoodenShipDecorated' !important;
+    float: none;
+   margin: 30px;
+}
+
+/*.congrat-duel h2{
+    font: normal 30px 'WoodenShipDecorated' !important;
+    float: none;
+    margin:none;
+}*/
+.congrat-duel .img-icon-duel-left{
+       width: 800px !important;
+    height: 600px !important;
+    margin: auto;
+    display: flex;
+}
+.congrat-duel .img-icon-duel-left img{
+       height: 100%;
+    margin:auto;
+}
+div.img-return{
+    width: 180px;
+    height:180px;
+    background:  url(../img/elements/return.png) 50% 50% no-repeat;
+     margin:30px auto;
+}
+.img-ret-left,
+.img-ret-right{
+    width: 180px;
+    height: 180px;
+    background:  url(../img/elements/ret.png) 50% 50% no-repeat;
+    margin:30px auto;
+}

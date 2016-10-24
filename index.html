@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="source/css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+</head>
+<body>
+	<div id="puzzle">
+		<article class="intro">
+			<img class="menu" src="source/img/elements/menu.png">
+			<img class="head" src="source/img/elements/Head.png">
+			<h1>"Не желаете ли разложить пузеля, господа?" </h1>
+			<div class=" button button-for-one"><p>Одиночная<br>игра</p></div>
+			<div class=" button button-duel"><p>Дуэль</p></div>
+			<div class=" button button-for-two"><p>Два<br>стола</p></div>
+			<div class="clearfix"></div>
+			<p>*Пузел - старое название игры пазлы, которое перекочевало к нам из Германии</p>
+		</article>
+		<section class="game-for-one none">
+			<img class="menu" src="source/img/elements/menu-one.png">
+			<h1 >"Какой изъ пузелей Вы предпочитаете разложить?"</h1>
+			<aside class="slider">
+
+				<div class="arrow-left"><img class="arow-left" src="source/img/elements/arow-left.png" ></div>
+				<div class="slide-wraper">
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="1" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="2" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="3" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="4" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="5" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="6" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="7" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="8" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="9" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="10" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="11" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="12" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="13" src="source/img/puzzle-img/">
+					</div>
+					<div class="slider-img">
+						<img class="choise none" src="source/img/elements/choise.png">
+						<img class="puzzle-img" data-puzzle="14" src="source/img/puzzle-img/">
+					</div>
+				</div>
+				<div class="arrow-right"><img class="arow-right" src="source/img/elements/arow-right.png" ></div>
+			</aside>
+			<h2 class="none">"Выберите уровень сложности"</h2>
+			<ul  id="set-parts" class="complexity none ">
+				<li>12</li>
+				<li>48</li>
+				<li>108</li>
+			</ul>
+			<div id="game-button" class="game-button  none" src="source/img/elements/game-button.png" >Играть</div>
+			
+		</section>
+		<!-- начало игры для одного-->
+				<section class="game-one none">
+				<div>
+				<img class="menu" src="source/img/elements/menu-one.png">
+				<div class="img-icon"><img src="source/img/puzzle-img/11.jpg"></div>
+				<h1 class="complexity"></h1>
+				
+				<h2 id="clock" class=" time button">00:00</h2>
+
+				<div class="puzzle-area">
+					<div class="perv"></div>
+				</div>
+				
+				
+
+
+				<div class="clearfix"></div>
+				<!-- GAME OPTIONS -->
+				<nav id="game-options" class="">
+		
+				<div class="previev">подсказка</div>
+				<div class="show-piece edge ">только<br>угловые</div>
+				<div class="show-piece center ">только<br>центральные</div>
+				<div class="show-piece all  active">показать<br>все</div>	
+				<div class="shufl">перемешать<br>пузели</div>
+				</nav>
+				</div>
+
+
+						<!-- CONGRATULATION -->
+				<div class="clearfix"></div>
+				<div  class="congrat ">
+					<!-- <img class="menu" src="source/img/elements/menu-one.png"> -->
+					<h1>Поздравляем!</h1>
+					<h2>Вы выиграли. Время <span class="insert-time"></span></h3>
+					<div class="clearfix"></div>
+					<div class="img-icon">
+					<img class="img-icon-img" src="">
+					
+					<!-- <img src="source/img/puzzle-img/11.jpg"> -->
+					</div>
+					<div class="img-return"></div>
+				</div>
+				</section>
+				
+				
+	
+
+				</section>
+	
+		
+		<section class="game-for-two none">
+			<img class="menu" src="source/img/elements/menu-one.png">
+			
+			<div class="player-left">
+				<section class="player-left-cont">
+					<h1 >"Какой изъ пузелей Вы предпочитаете разложить?"</h1>
+
+					<aside class="slider-left">
+						<div class="arrow-left"><img class="arow-left" src="source/img/elements/arow-left.png" ></div>
+						<div class="slide-wraper-left">
+							<div class="slider-img-left">
+								<img class="choise-left none" src="source/img/elements/choise.png">
+								<img class="puzzle-img-left" data-puzzle="1" src="source/img/puzzle-img/0.jpg">
+							</div>
+							<div class="slider-img-left">
+								<img class="choise-left none" src="source/img/elements/choise.png">
+								<img class="puzzle-img-left" data-puzzle="2" src="source/img/puzzle-img/1.jpg">
+							</div>
+							<div class="slider-img-left">
+								<img class="choise-left none" src="source/img/elements/choise.png">
+								<img class="puzzle-img-left" data-puzzle="3" src="source/img/puzzle-img/2.jpg">
+							</div>
+							<div class="slider-img-left">
+								<img class="choise-left none" src="source/img/elements/choise.png">
+								<img class="puzzle-img-left" data-puzzle="4" src="source/img/puzzle-img/3.jpg">
+							</div>
+							<div class="slider-img-left">
+								<img class="choise-left none" src="source/img/elements/choise.png">
+								<img class="puzzle-img-left" data-puzzle="5" src="source/img/puzzle-img/4.jpg">
+							</div>
+							<div class="slider-img-left">
+								<img class="choise-left none" src="source/img/elements/choise.png">
+								<img class="puzzle-img-left" data-puzzle="6" src="source/img/puzzle-img/5.jpg">
+							</div>
+                            <div class="slider-img-left">
+                                <img class="choise-left none" src="source/img/elements/choise.png">
+                                <img class="puzzle-img-left" data-puzzle="7" src="source/img/puzzle-img/6.jpg">
+                            </div>
+                            <div class="slider-img-left">
+                                <img class="choise-left none" src="source/img/elements/choise.png">
+                                <img class="puzzle-img-left" data-puzzle="8" src="source/img/puzzle-img/7.jpg">
+                            </div>
+                            <div class="slider-img-left">
+                                <img class="choise-left none" src="source/img/elements/choise.png">
+                                <img class="puzzle-img-left" data-puzzle="9" src="source/img/puzzle-img/8.jpg">
+                            </div>
+                            <div class="slider-img-left">
+                                <img class="choise-left none" src="source/img/elements/choise.png">
+                                <img class="puzzle-img-left" data-puzzle="10" src="source/img/puzzle-img/9.jpg">
+                            </div>
+                            <div class="slider-img-left">
+                                <img class="choise-left none" src="source/img/elements/choise.png">
+                                <img class="puzzle-img-left" data-puzzle="11" src="source/img/puzzle-img/10.jpg">
+                            </div>
+                            <div class="slider-img-left">
+                                <img class="choise-left none" src="source/img/elements/choise.png">
+                                <img class="puzzle-img-left" data-puzzle="12" src="source/img/puzzle-img/11.jpg">
+                            </div>
+                            <div class="slider-img-left">
+                                <img class="choise-left none" src="source/img/elements/choise.png">
+                                <img class="puzzle-img-left" data-puzzle="13" src="source/img/puzzle-img/12.jpg">
+                            </div>
+                            <div class="slider-img-left">
+                                <img class="choise-left none" src="source/img/elements/choise.png">
+                                <img class="puzzle-img-left" data-puzzle="14" src="source/img/puzzle-img/13.jpg">
+                            </div>
+                    
+						</div>
+						<div class="arrow-right"><img class="arow-right" src="source/img/elements/arow-right.png" ></div>
+					</aside>
+					<div class="clearfix"></div>
+
+					<h2 class="none">"Выберите уровень сложности"</h2>
+					
+					<div class="compl-left">
+							<ul  id="set-parts-left" class="complexity-left  none">
+							<li>12</li>
+							<li>48</li>
+							<li>108</li>
+							</ul>
+						<div class="clearfix"></div>
+
+						<div id="game-button-left" class="game-button-left none" src="source/img/elements/game-button.png" >Играть</div>
+					</div>
+				</section>
+
+				<!-- Игра левый экран -->
+			<section class="game-two-left none">
+				<div class="div-left">
+					<div class="img-icon-left"><img src="source/img/puzzle-img/11.jpg"></div>
+					<h1 class="complexity-left">12 пузелей</h1>
+					
+					<h2 id="clock-left" class="time-left button">00:00</h2>
+
+					<div class="puzzle-area-left">
+						<div class="perv-left"></div>
+					</div>
+
+					
+					<div class="clearfix"></div>
+					<!-- GAME OPTIONS -->
+					<nav  class="game-options-two-left">
+						<div class="previev-left">подсказка</div>
+						<div class="show-piece-left edge-left ">только<br>угловые</div>
+						<div class="show-piece-left center-left ">только<br>центральные</div>
+						<div class="show-piece-left all-left  active">показать<br>все</div>	
+						<div class="shufl-left">перемешать<br>пузели</div>
+					</nav>
+				</div>
+				<!-- CONGRATULATION -->
+				<div  class="congrat-left ">
+				
+				<h1>Поздравляем!</h1>
+				<h2>Вы выиграли. Время <span class="insert-time-left"></span></h3>
+				<div class="clearfix"></div>
+				<div class="img-icon-left"><img src="source/img/puzzle-img/11.jpg"></div>
+				<div class="clearfix"></div>
+				<div class="img-return none"></div>
+				</div>
+				
+			</section>
+				<!-- +++++++++++++++++++++++++++++++++++++ -->
+
+			</div>
+
+			<div class="line"></div>
+			
+			<div class="player-right ">
+				<section class="player-right-cont">
+					<h1 >"Какой изъ пузелей Вы предпочитаете разложить?"</h1>
+
+				<aside class="slider-right">
+						<div class="arrow-left"><img class="arow-left" src="source/img/elements/arow-left.png" ></div>
+						<div class="slide-wraper-right">
+							<div class="slider-img-right">
+								<img class="choise-right none" src="source/img/elements/choise.png">
+								<img class="puzzle-img-right" data-puzzle="1" src="source/img/puzzle-img/0.jpg">
+							</div>
+							<div class="slider-img-right">
+								<img class="choise-right none" src="source/img/elements/choise.png">
+								<img class="puzzle-img-right" data-puzzle="2" src="source/img/puzzle-img/1.jpg">
+							</div>
+							<div class="slider-img-right">
+								<img class="choise-right none" src="source/img/elements/choise.png">
+								<img class="puzzle-img-right" data-puzzle="3" src="source/img/puzzle-img/2.jpg">
+							</div>
+							<div class="slider-img-right">
+								<img class="choise-right none" src="source/img/elements/choise.png">
+								<img class="puzzle-img-right" data-puzzle="4" src="source/img/puzzle-img/3.jpg">
+							</div>
+							<div class="slider-img-right">
+								<img class="choise-right none" src="source/img/elements/choise.png">
+								<img class="puzzle-img-right" data-puzzle="5" src="source/img/puzzle-img/4.jpg">
+							</div>
+							<div class="slider-img-right">
+								<img class="choise-right none" src="source/img/elements/choise.png">
+								<img class="puzzle-img-right" data-puzzle="6" src="source/img/puzzle-img/5.jpg">
+							</div>
+                            <div class="slider-img-right">
+                                <img class="choise-right none" src="source/img/elements/choise.png">
+                                <img class="puzzle-img-right" data-puzzle="7" src="source/img/puzzle-img/6.jpg">
+                            </div>
+                            <div class="slider-img-right">
+                                <img class="choise-right none" src="source/img/elements/choise.png">
+                                <img class="puzzle-img-right" data-puzzle="8" src="source/img/puzzle-img/7.jpg">
+                            </div>
+                            <div class="slider-img-right">
+                                <img class="choise-right none" src="source/img/elements/choise.png">
+                                <img class="puzzle-img-right" data-puzzle="9" src="source/img/puzzle-img/8.jpg">
+                            </div>
+                            <div class="slider-img-right">
+                                <img class="choise-right none" src="source/img/elements/choise.png">
+                                <img class="puzzle-img-right" data-puzzle="10" src="source/img/puzzle-img/9.jpg">
+                            </div>
+                            <div class="slider-img-right">
+                                <img class="choise-right none" src="source/img/elements/choise.png">
+                                <img class="puzzle-img-right" data-puzzle="11" src="source/img/puzzle-img/10.jpg">
+                            </div>
+                            <div class="slider-img-right">
+                                <img class="choise-right none" src="source/img/elements/choise.png">
+                                <img class="puzzle-img-right" data-puzzle="12" src="source/img/puzzle-img/11.jpg">
+                            </div>
+                            <div class="slider-img-right">
+                                <img class="choise-right none" src="source/img/elements/choise.png">
+                                <img class="puzzle-img-right" data-puzzle="13" src="source/img/puzzle-img/12.jpg">
+                            </div>
+                            <div class="slider-img-right">
+                                <img class="choise-right none" src="source/img/elements/choise.png">
+                                <img class="puzzle-img-right" data-puzzle="14" src="source/img/puzzle-img/13.jpg">
+                            </div>
+                           
+						</div>
+						<div class="arrow-right"><img class="arow-right" src="source/img/elements/arow-right.png" ></div>
+					</aside>
+
+					<div class="clearfix"></div>
+					
+					<h2 class="none">"Выберите уровень сложности"</h2>
+
+					<div class="compl-right">
+						<ul id="set-parts-right" class="complexity-right none">
+						<li>12</li>
+						<li>48</li>
+						<li>108</li>
+						</ul>
+					<div class="clearfix"></div>
+
+						<div id="game-button-right" class="game-button-right none" src="source/img/elements/game-button.png" >Играть</div>
+					</div>
+				</section>
+
+				<!-- Игра правый экран -->
+			<section class="game-two-right none">
+				<div class="div-right">
+					<div class="img-icon-right"><img src="source/img/puzzle-img/11.jpg"></div>
+					<h1 class="complexity-right">12 пузелей</h1>
+					
+					<h2 id="clock-right" class="time-right button">00:00</h2>
+
+					<div class="puzzle-area-right">
+						<div class="perv-right"></div>
+					</div>
+
+					<!-- CONGRATULATION -->
+					
+
+					<div class="clearfix"></div>
+					<!-- GAME OPTIONS -->
+					<nav  class="game-options-two-right">
+						<div class="previev-right">подсказка</div>
+						<div class="show-piece-right edge-right ">только<br>угловые</div>
+						<div class="show-piece-right center-right ">только<br>центральные</div>
+						<div class="show-piece-right all-right  active">показать<br>все</div>	
+						<div class="shufl-right">перемешать<br>пузели</div>
+					</nav>
+				</div>
+				<div  class="congrat-right ">
+				
+				<h1>Поздравляем!</h1>
+				<h2>Вы выиграли. Время <span class="insert-time-right"></span></h3>
+				<div class="clearfix"></div>
+				<div class="img-icon-right"><img src="source/img/puzzle-img/11.jpg"></div>
+				<div class="clearfix"></div>
+				<div class="img-return none"></div>
+				</div>
+
+			</section>
+				<!-- +++++++++++++++++++++++++++++++++++++ -->					
+			</div>
+
+		</section>
+
+			<section class="game-duel none">
+				<section class="duel-cont">
+							<img class="menu" src="source/img/elements/menu-one.png">
+					<h1 >"Какой изъ пузелей Вы предпочитаете разложить?"</h1>
+					<aside class="slider-duel">
+
+						<div class="arrow-left"><img class="arow-left" src="source/img/elements/arow-left.png" ></div>
+						<div class="slide-wraper">
+							<div class="slider-img">
+								<img class="choise none" src="source/img/elements/choise.png">
+								<img class="puzzle-img" data-puzzle="1" src="source/img/puzzle-img/">
+							</div>
+							<div class="slider-img">
+								<img class="choise none" src="source/img/elements/choise.png">
+								<img class="puzzle-img" data-puzzle="2" src="source/img/puzzle-img/">
+							</div>
+							<div class="slider-img">
+								<img class="choise none" src="source/img/elements/choise.png">
+								<img class="puzzle-img" data-puzzle="3" src="source/img/puzzle-img/">
+							</div>
+							<div class="slider-img">
+								<img class="choise none" src="source/img/elements/choise.png">
+								<img class="puzzle-img" data-puzzle="4" src="source/img/puzzle-img/">
+							</div>
+							<div class="slider-img">
+								<img class="choise none" src="source/img/elements/choise.png">
+								<img class="puzzle-img" data-puzzle="5" src="source/img/puzzle-img/">
+							</div>
+							<div class="slider-img">
+								<img class="choise none" src="source/img/elements/choise.png">
+								<img class="puzzle-img" data-puzzle="6" src="source/img/puzzle-img/">
+							</div>
+							<div class="slider-img">
+								<img class="choise none" src="source/img/elements/choise.png">
+								<img class="puzzle-img" data-puzzle="7" src="source/img/puzzle-img/">
+							</div>
+							<div class="slider-img">
+								<img class="choise none" src="source/img/elements/choise.png">
+								<img class="puzzle-img" data-puzzle="8" src="source/img/puzzle-img/">
+							</div>
+							<div class="slider-img">
+								<img class="choise none" src="source/img/elements/choise.png">
+								<img class="puzzle-img" data-puzzle="9" src="source/img/puzzle-img/">
+							</div>
+							<div class="slider-img">
+								<img class="choise none" src="source/img/elements/choise.png">
+								<img class="puzzle-img" data-puzzle="10" src="source/img/puzzle-img/">
+							</div>
+							<div class="slider-img">
+								<img class="choise none" src="source/img/elements/choise.png">
+								<img class="puzzle-img" data-puzzle="11" src="source/img/puzzle-img/">
+							</div>
+							<div class="slider-img">
+								<img class="choise none" src="source/img/elements/choise.png">
+								<img class="puzzle-img" data-puzzle="12" src="source/img/puzzle-img/">
+							</div>
+							<div class="slider-img">
+								<img class="choise none" src="source/img/elements/choise.png">
+								<img class="puzzle-img" data-puzzle="13" src="source/img/puzzle-img/">
+							</div>
+							<div class="slider-img">
+								<img class="choise none" src="source/img/elements/choise.png">
+								<img class="puzzle-img" data-puzzle="14" src="source/img/puzzle-img/">
+							</div>
+						</div>
+						<div class="arrow-right"><img class="arow-right" src="source/img/elements/arow-right.png" ></div>
+					</aside>
+					<h2 class="none">"Выберите уровень сложности"</h2>
+					<ul  id="set-parts" class="complexity none ">
+						<li>12</li>
+						<li>48</li>
+						<li>108</li>
+					</ul>
+					<div id="game-button" class="game-button-duel none" src="source/img/elements/game-button.png" >Играть</div>
+				</section>
+			
+			<div class="player-duel none">
+
+				<section class="game-duel-left ">
+					
+					<div class="img-icon-duel-left"><img src="source/img/puzzle-img/11.jpg"></div>
+					<h1 class="complexity">12 пузелей</h1>
+					
+					<h2 id="clock-duel-left" class="time-left button">00:00</h2>
+
+					<div class="puzzle-duel-left">
+						<div class="perv-duel-left"></div>
+					</div>
+					<!-- GAME OPTIONS -->
+					<nav class="game-options-duel-left" class="">
+						<div class="previev-duel-left">подсказка</div>
+						<div class="show-piece-duel-left edge-duel-left ">только<br>угловые</div>
+						<div class="show-piece-duel-left center-duel-left ">только<br>центральные</div>
+						<div class="show-piece-duel-left all-duel-left  active">показать<br>все</div>	
+					</nav>
+					
+				</section>
+				
+				<div class="line-duel"></div>
+
+				<section class="game-duel-right ">
+					
+					<div class="img-icon-duel-right"><img src="source/img/puzzle-img/11.jpg"></div>
+					<h1 class="complexity">12 пузелей</h1>
+					
+					<h2 id="clock-duel-right" class="time-right button">00:00</h2>
+
+					<div class="puzzle-duel-right">
+						<div class="perv-duel-right"></div>
+					</div>
+					<!-- GAME OPTIONS -->
+					
+					<nav class="game-options-duel-right" class="">
+						<div class="previev-duel-right">подсказка</div>
+						<div class="show-piece-duel-right edge-duel-right ">только<br>угловые</div>
+						<div class="show-piece-duel-right center-duel-right ">только<br>центральные</div>
+						<div class="show-piece-duel-right all-duel-right  active">показать<br>все</div>	
+					</nav>
+				</section>
+				<div  class="congrat-duel none">
+				
+					<h1>Выиграл игрок <span class="duel-winner"></span></h1>
+					
+					<div class="clearfix"></div>
+					<div class="img-icon-duel-left"><img src="source/img/puzzle-img/1.jpg"></div>
+					<div class="img-return"></div>
+				</div>
+			</div>
+		</section>		
+
+
+			
+	</div>
+
+</body>
+	<script src="source/js/lib/jquery-2.2.4.min.js"></script>
+	<script src="source/js/lib/easingPlugin.js"></script>
+	<script src="source/js/lib/jquery-ui.min.js"></script>
+	<script src="source/js/lib/hammer.min.js"></script>
+	<script src="source/js/lib/dragable.js">  </script>
+	<script src="source/js/main.js"></script>
+	<!-- <script>
+
+$('input.mybutton').on('click', function() {
+     var Paste = $(this).val();
+     console.log(Paste)
+     $('form.email > input').val($('form.email > input').val() + Paste);
+  });
+$('input.del').on('click', function() {
+    var str = $('form.email > input').val()
+   str = str.slice(0,-1);
+$('form.email > input').val( str)
+  });
+
+$('input.remove').on('click', function() {  
+	$('form.email > input').val('')
+  });
+	</script>
+	 -->
+</html>
