@@ -9,7 +9,6 @@ $('article.intro > div.button-for-two').on('click', function () {
 
 sliderImgLeft = $('aside.slider-left div.slider-img-left').find('img.puzzle-img-left');
 	$.each(sliderImgLeft, function( n , z ){
-	 	// v.src = 'source/img/puzzle-img/'+k+'.jpg';
 	 	$(z).attr({'src':'source/img/puzzle-img/'+n+'.jpg'});
 	 	$(z).attr({'data-puzzle':n})
 	 	z.onload = function(){
@@ -24,7 +23,6 @@ sliderImgLeft = $('aside.slider-left div.slider-img-left').find('img.puzzle-img-
 
 sliderImgRight = $('aside.slider-right div.slider-img-right').find('img.puzzle-img-right');
 	 $.each(sliderImgRight, function( key , val ){
-	 	// v.src = 'source/img/puzzle-img/'+k+'.jpg';
 	 	$(val).attr({'src':'source/img/puzzle-img/'+key+'.jpg'});
 	 	$(val).attr({'data-puzzle':key})
 	 	val.onload = function(){
@@ -130,10 +128,8 @@ $('section.game-two-left').removeClass('none')
 
 	start_time1()
 
-
 })
 
- 
 
  once1 = false;
 
@@ -396,18 +392,6 @@ if($('.div-left').hasClass('none') && $('.div-right').hasClass('none')){
 	$('.img-return').removeClass('none')
 
 }
-
-time1 = $('#clock-right').html()
-console.log(time1)
-$('.insert-time-right').html(time1);
-
- })
- $('.game-two-left').bind('touchstart', function(){
-
-time2 = $('#clock-left').html()
-console.log(time2)
-$('.insert-time-left').html(time2);
-
 
 
  })

@@ -7,7 +7,6 @@ $('article.intro > div.button-for-one').on('click', function () {
 	
 	sliderImg = $('aside.slider div.slider-img').find('img.puzzle-img');
 	 $.each(sliderImg, function( k , v ){
-	 	// v.src = 'source/img/puzzle-img/'+k+'.jpg';
 	 	$(v).attr({'src':'source/img/puzzle-img/'+k+'.jpg'});
 	 	$(v).attr({'data-puzzle':k})
 	 	v.onload = function(){
@@ -72,7 +71,6 @@ $('aside.slider div.slider-img').on('click' , function(){
 // Этот костыль запускает работу скрипта после формирования пазла
 
 
-
 $('div.game-button').on('click', function(){
 
 	$('section.game-for-one').addClass('none')
@@ -114,15 +112,12 @@ var start_time_interval;
 
 $('.congrat-duel').find('.img-return').on('click', function () {
 	 location.reload();
-	//$('article.intro').removeClass('none');
-	//$('section.game-for-one').addClass('none');
 })
 
 
 swipe1 = new Swiper($('div.slide-wraper'));
  
  swipe1.hammertime.on('swipeleft swiperight', function(ev) {
- 	// console.log(ev)
   ev.preventDefault();
   swipe1.direction = ev.type;
   if(swipe1.direction == 'swiperight') {
@@ -158,8 +153,6 @@ $('.shufl').on('click', function(){
 	createPuzzle.randomise($('.puzzle-area'))
 	
 })
-
-
 
 
 $('.all').on('click', function(){
@@ -216,11 +209,3 @@ $('.show-piece').removeClass('active')
  	}
  })
 
-
-$(document.body).bind('touchstart', function(){
-
-time = $('#clock').html()
-
-$('span.insert-time').html(time);
-
- })

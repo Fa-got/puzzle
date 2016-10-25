@@ -81,10 +81,6 @@ $('div.game-button-duel').on('click', function(){
 	puzzleEvent4 = new PuzzleEvent(parseInt(numPieceRight), $('.puzzle-duel-right'), parseInt($('aside.slider-duel div.slider-img').find('.puzzle-img.active').attr('data-puzzle'))+1)
 		puzzleEvent4.eventPuzzle()
 		
-		// timer1 = new Timer($('.time-right'))
-		// timer1.start_time()
-
-		
 
 	createPuzzle5 = new CreatePuzzle(parseInt(numPieceRight), $('.puzzle-duel-left'),  parseInt($('aside.slider-duel div.slider-img').find('.puzzle-img.active').attr('data-puzzle'))+1);
 	createPuzzle5.creates()
@@ -92,8 +88,6 @@ $('div.game-button-duel').on('click', function(){
 	puzzleEvent5 = new PuzzleEvent(parseInt(numPieceRight), $('.puzzle-duel-left'), parseInt($('aside.slider-duel div.slider-img').find('.puzzle-img.active').attr('data-puzzle'))+1)
 		puzzleEvent5.eventPuzzle()
 
-		// timer2 = new Timer($('.time-left'))
-		// timer2.start_time()
 	var start_time_interval_left;
   function start_time1() { 
     $('#clock-duel-left').text('00:00')
@@ -268,28 +262,14 @@ $('.show-piece-duel-right').removeClass('active')
  	}
  })
 
-// $('.game-duel').bind('touchend', function(){
-// 	if($('.game-duel-right').hasClass('none')){
-// 		$('.congrat-duel').removeClass('none')
-// 		$('span.duel-winner').html('Справа')
-
-// 	}else if($('.game-duel-left').hasClass('none')){
-// 		$('.congrat-duel').removeClass('none')
-// 		$('span.duel-winner').html('Слева')
-	
-// 	}
-// })
 
 $('.congrat').find('.img-return').on('click', function () {
 	 location.reload();
-	//$('article.intro').removeClass('none');
-	//$('section.game-for-one').addClass('none');
 })
 
 swipe5 = new Swiper($('.slider-duel div.slide-wraper'));
  
  swipe5.hammertime.on('swipeleft swiperight', function(ev) {
- 	// console.log(ev)
   ev.preventDefault();
   swipe5.direction = ev.type;
   if(swipe5.direction == 'swiperight') {

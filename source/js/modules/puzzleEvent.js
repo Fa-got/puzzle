@@ -34,7 +34,6 @@ self = this;
     self.aria.on("touchend", self.piece, function() {
          event.preventDefault();
          event.stopPropagation();
-         // console.log(self.piece)
          self.closestToOffset(self.piece);
       });
   }
@@ -158,7 +157,6 @@ self = this;
     self.marginX = this.marginX;
     self.marginY = this.marginY;
   })
- // console.log(self.marginX, self.marginY, self.Dataimg, self.pieceImgLen)
   this.couplMax_x = self.marginX*1.3;
    this.couplMin_x = self.marginX*0.65;
              
@@ -175,27 +173,14 @@ self = this;
      self.piece.css({'width':self.marginX+1, 'height':self.marginY+2})
    // -------------------- Функция отвичает за движение пазла------------------------- // 
 
-     // var elements = $(' .group');
-     //       elements.each(function(e) {
-     //           var element = $(this)
-     //           element.bind('touchmove', function(event) {
-     //               event.preventDefault();
-     //                   var touch = event.targetTouches[0];
-     //                   element[0].style.left = touch.pageX  - this.scrollWidth /2  + 'px';
-     //                   element[0].style.top = touch.pageY -  this.scrollHeight /2 + 'px';  
-     //           });
-     //      });    
-
    this.aria.find($('.group')).each(function(key, val){
         new webkit_draggable(val, {revert : false, scroll : false});
     });
 
   // -------------------- 
-  // console.log('x ' + langGroupLeft, 'y '+langGroupTop)
 $('.group').on("touchmove", function() {
     event.preventDefault();
     event.stopPropagation();
-    // console.log($(this).position().top, "top");
     var procent_width = $(this).children("div").width() / 25 * 100 ;
      if ($(this).parent("div").attr("class") == "puzzle-area-right" || $(this).parent("div").attr("class") == "puzzle-duel-right") {
         if ($(this).position().top  <= 0) {
@@ -282,15 +267,13 @@ PuzzleEvent.prototype.closestToOffset = function(offset) {
         coordY.push(elOffset.top)
     });
     var nearest = '';
- console.time('test');
+ // console.time('test');
    $.each(self.piece, function(key, val){
      
       $.each(coordX, function(k, v) {
         if(k != key){
            var diff, diff2;
             diff = $(val).offset().left-v;
-
-
 
             if(Math.abs(diff) > self.couplMin_x && Math.abs(diff) < self.couplMax_x) nearest = [k, 'x', diff];
             if(Math.abs(diff) > self.couplMin_y && Math.abs(diff) < self.couplMax_y) nearest = [k, 'y', diff];
@@ -319,7 +302,7 @@ PuzzleEvent.prototype.closestToOffset = function(offset) {
        
       })
    })
-   console.timeEnd('test');
+   // console.timeEnd('test');
 }
 
 PuzzleEvent.prototype.isConnect = function(elem1, elem2, diff, diffX){
@@ -338,6 +321,7 @@ PuzzleEvent.prototype.isConnect = function(elem1, elem2, diff, diffX){
 
 
 PuzzleEvent.prototype.doConnect = function(elem1, elem2, direction){
+
   var groupMargin = [parseInt($(elem1).css('margin-top')), parseInt($(elem1).css('margin-left'))]
   var group = $(elem1).parent('.group');
   var elem2Row = $(elem2).attr('data-row');
@@ -347,7 +331,6 @@ PuzzleEvent.prototype.doConnect = function(elem1, elem2, direction){
 
   group.append(pieces);
 
-  
   
 
   $(elem2).attr({'data-connect':'true'})
@@ -367,15 +350,11 @@ PuzzleEvent.prototype.doConnect = function(elem1, elem2, direction){
      var margin = [0, 0]
 
 
-      // console.log(group.length)
       if(direction == 'x'){
         margin = [0, self.marginX]
       }else{
         margin = [self.marginY, 0]
       }
-     
-
-      
       
       $(val).css({'margin-top': ((parseInt($(val).attr('data-row'))-arrayRow.min()))*self.marginY+'px'});
       $(val).css({'margin-left': ((parseInt($(val).attr('data-column'))-arrayColumn.min()))*self.marginX+'px'});
@@ -389,8 +368,6 @@ PuzzleEvent.prototype.doConnect = function(elem1, elem2, direction){
       group.attr('data-haight',langGroupTop)
       group.attr('data-lan',pieceLen)
 
-      // console.log(group.attr('data-lan'), self.length)
-
       if(group.attr('data-lan') == self.length ){
           $(group).addClass('done')
       }
@@ -398,7 +375,11 @@ PuzzleEvent.prototype.doConnect = function(elem1, elem2, direction){
 
     if($(group).hasClass('done')){
        $(group).parent().parent().addClass('none')
-       // console.log('DONE -----------------------')
+       $('span.insert-time').html($('#clock').html());
+       $('.insert-time-right').html($('#clock-right').html())
+       $('.insert-time-left').html($('#clock-left').html());
+
+
        $(group).parents('.player-duel').find('.congrat-duel').removeClass('none');
        if($('.div-left').hasClass('none') && $('.div-right').hasClass('none')){
   $('.img-return').removeClass('none')
@@ -417,7 +398,6 @@ PuzzleEvent.prototype.doConnect = function(elem1, elem2, direction){
 
   })
  
-  // console.log(groupMargin, $(elem1).css('margin-top'))
   if (groupMargin[0] != parseInt($(elem1).css('margin-top'))){
 
     $(group).css({'top': parseInt($(group).css('top'))-parseInt($(elem1).css('margin-top'))+'px'})

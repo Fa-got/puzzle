@@ -8,7 +8,6 @@ CreatePuzzle = function (length, aria, Dataimg){
 	this.b=1;
 	this.i=1;
 	this.c=1;
-// console.log(this.Dataimg)
 }
 
 CreatePuzzle.prototype.creates = function(){
@@ -116,7 +115,6 @@ CreatePuzzle.prototype.creates = function(){
 		
 	}	
 	this.randomise(this.aria)
-		//puzzleEvent = new PuzzleEvent(this.aria, this.Dataimg);
 
 }
 
@@ -127,10 +125,6 @@ CreatePuzzle.prototype.randomise = function(aria){
     var positions = [];
     var elems = this.aria.find($('.group'));
     elems.each(function(key) {
-        // var coords = {
-        //     w: $(this).find('.piece').outerWidth(true),
-        //     h: $(this).find('.piece').outerHeight(true)
-        // };
         var coords = {
             w: containerW / self.b,
             h: containerH / self.c

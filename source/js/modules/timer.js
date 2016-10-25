@@ -20,20 +20,7 @@ Timer.prototype.start_time = function() {
       if (min.toString().length   == 1) min   = '0' + min;
       if (hours.toString().length == 1) hours = '0' + hours;
       self.selector.html(min + ':' + sec);
-      // console.log(hours + ':' + min + ':' + sec);
     },100);
   };
-
-// $( "div" ).click(function() {
-
-//  var this_class = $(this).attr("class");
-//     if(this_class == "start"){
-//       start_time();
-//     }else{
-//       clearInterval(start_time_interval);
-//     } 
-
-//   });
-
 
  module.exports = Timer;

@@ -52,10 +52,7 @@ div#puzzle > article.intro > div.button{
 	background:url(../img/elements/button-border.png) 50% 50% no-repeat;
 	display: flex;
 }
-/*div#puzzle > article.intro > div.button:nth-child(5),
-div#puzzle > article.intro > div.button:nth-child(6){
-	color:#9a9a9a;
-}*/
+
 div#puzzle > article.intro > div.button:nth-child(4){
 	margin-left: 470px;
 }
@@ -134,7 +131,6 @@ div#puzzle > section.game-for-one > aside.slider div.slider-img{
 	width: 269px;
 	height: 193px;
 	margin: 30px 0 0 30px;
-	/*outline: 1px solid black;*/
 	float: left;
 	display: flex;
 }
@@ -161,7 +157,6 @@ div#puzzle > section.game-for-one > ul.complexity{
 	margin: auto;
 }
 
-
 div#puzzle > section.game-duel  ul.complexity> li,
 div#puzzle > section.game-for-one  ul.complexity> li{
 	width: 120px;
@@ -175,7 +170,6 @@ div#puzzle > section.game-for-one  ul.complexity> li{
     list-style: none;
     padding: 25px 0 0 0;
     box-sizing: border-box;
-    /*test animation*/
     transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
     transition-duration: 1s;
 
@@ -200,10 +194,6 @@ div#puzzle > section.game-for-one div.game-button{
 	text-align: center;
 	padding: 20px 0 0 0;
 }
-/*div#puzzle > section.game-for-one div.game-button:hover{
-	background: url(../img/elements/game-button-active.png) 100% 100% no-repeat;
-	color: #3A322F;
-}*/
 
 /*Line*/
 div.line-duel,
@@ -325,12 +315,10 @@ div#puzzle > section.game-for-two section.player-left-cont h2{
     text-align: center;
 }
 
-
 div#puzzle > section.game-for-two > div.compl-right,
 div#puzzle > section.game-for-two > div.compl-left{
     width: 930px;
     height: 275px;
-    /*outline: 1px solid #ccc;*/
     float: left;
 }
 div#puzzle > section.game-for-two > div.compl-left{
@@ -359,7 +347,6 @@ div#puzzle > section.game-for-two > div.player-left  div.compl-left > ul{
     width: 650px;
     height: 120px;
     margin: 20px 0 0 0;
-    /*outline: 1px solid #ccc;*/
     float: left;
 }
 div#puzzle > section.game-for-two > div.player-right  div.compl-right > ul > li,
@@ -375,7 +362,7 @@ div#puzzle > section.game-for-two > div.player-left div.compl-left > ul > li{
     list-style: none;
     padding: 25px 0 0 0;
     box-sizing: border-box;
-        box-sizing: border-box;
+    box-sizing: border-box;
     transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
     transition-duration: 1s;
 }
@@ -405,7 +392,6 @@ section.game-duel-right,
 section.game-duel-left{
     padding-top: 50px;
 }
-
 
 section.game-duel-right,
 section.game-two-right{
@@ -472,11 +458,7 @@ section.game-two-right  nav > div{
     padding: 20px 0 0 0;
      color:white;
 }
-}
-section.game-duel-right > nav > div:first-child,
-section.game-two-right  nav > div:first-child{
-    /*margin-left: 270px;*/
-}
+
 section.game-duel-right > nav > div > a,
 section.game-two-right  nav > div > a{
     text-decoration: none;
@@ -485,10 +467,6 @@ section.game-two-right  nav > div > a{
     text-align: center;
     padding: 25px 0px;
 }
-
-
-
-
 
 
 /*--------Game section two-left---------*/
@@ -553,10 +531,7 @@ section.game-two-left  nav > div{
     padding: 20px 0 0 0;
     color:white;
 }
-section.game-duel-left > nav > div:first-child,
-section.game-two-left nav > div:first-child{
-    /*margin-left: 120px;*/
-}
+
 section.game-duel-left > nav > div > a,
 section.game-two-left  nav > div > a{
     text-decoration: none;
@@ -629,7 +604,6 @@ section.game-one  nav > div.active{
     color: #000;
 }
 
-
 section.game-one  nav > div:first-child{
 	margin-left: 270px;
 }
@@ -637,7 +611,6 @@ section.game-one  nav > div:first-child{
 
  .group{    
    background: #71baf2; 
-   /*float: left;*/
    text-align: center;
    font-size: 20px;
    position: absolute;  
@@ -713,16 +686,15 @@ div.perv-duel-right,
     background-repeat: no-repeat;
     background-position: 50% 50%;
 }
-/*div.previev  .active{
-     background:url(../img/elements/puzzle-button-active.png);
-     color: black;
-}*/
+
 div.shufl:hover{
      background:url(../img/elements/puzzle-button-active.png);
      color: black;
 }
 .index{
-    z-index: -2 !important;
+    /*z-index: -2 !important;*/
+    left: -9999px !important;
+    top: -9999px !important;
 }
 
 div.congrat{
@@ -799,11 +771,6 @@ div.congrat > div.img-icon img{
    margin: 30px;
 }
 
-/*.congrat-duel h2{
-    font: normal 30px 'WoodenShipDecorated' !important;
-    float: none;
-    margin:none;
-}*/
 .congrat-duel .img-icon-duel-left{
        width: 800px !important;
     height: 600px !important;
