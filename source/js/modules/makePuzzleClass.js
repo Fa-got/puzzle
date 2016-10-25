@@ -17,8 +17,8 @@ CreatePuzzle.prototype.creates = function(){
 		
 		
 			case 12:
-				this.marginX = 224;
-         		this.marginY = 223;
+				this.marginX = 148;
+         		this.marginY = 149;
 				while (this.i <= this.length && this.b <=this.length) {
 					if(this.i== 4 || this.i == 7 || this.i == 10){
 					this.b = 1 
@@ -32,8 +32,8 @@ CreatePuzzle.prototype.creates = function(){
 			break;
 
 			case 48:
-				this.marginX = 112;
-         		this.marginY = 112;
+				this.marginX = 73;
+         		this.marginY = 74;
 				
 				while (this.i <= this.length && this.b <=this.length) {
 					if(this.i== 7 || this.i == 13 || this.i == 19 || this.i == 25 || this.i == 31 || this.i == 37 || this.i == 43){
@@ -48,8 +48,8 @@ CreatePuzzle.prototype.creates = function(){
 			break;
 
 			case 108:
-				this.marginX = 74;
-        		this.marginY = 73;
+				this.marginX = 49;
+        		this.marginY = 48;
 				while (this.i <= this.length && this.b <=this.length) {
 					if(this.i== 10 || this.i == 19 || this.i == 28 || this.i == 37 || this.i == 46 || this.i == 55 || this.i == 64 || this.i == 73 || this.i == 82 || this.i == 91 || this.i == 100){
 					this.b = 1 
@@ -68,8 +68,8 @@ CreatePuzzle.prototype.creates = function(){
 		switch(this.length){
 
 			case 12:
-				this.marginX = 224;
-         		this.marginY = 223;
+				this.marginX = 148;
+         		this.marginY = 149;
 				while (this.i <= this.length && this.b <=this.length) {
 					if(this.i== 5 || this.i == 9){
 					this.b = 1 
@@ -83,8 +83,8 @@ CreatePuzzle.prototype.creates = function(){
 			break;
 
 			case 48:
-				this.marginX = 112;
-         		this.marginY = 112;
+				this.marginX = 73;
+         		this.marginY = 74;
 				while (this.i <= this.length && this.b <=this.length) {
 					if(this.i== 9 || this.i == 17 || this.i == 25 || this.i == 33 || this.i == 41 ){
 					this.b = 1 
@@ -98,8 +98,8 @@ CreatePuzzle.prototype.creates = function(){
 			break;
 
 			case 108:
-				this.marginX = 74;
-        		this.marginY = 73;
+				this.marginX = 49;
+        		this.marginY = 48;
 				while (this.i <= this.length && this.b <=this.length) {
 					if(this.i== 13 || this.i == 25 || this.i == 37 || this.i == 49 || this.i == 61 || this.i == 73 || this.i == 85 || this.i == 97 ){
 					this.b = 1 

@@ -206,7 +206,7 @@ swipe2 = new Swiper($('.slide-wraper-left'));
   ev.preventDefault();
   swipe2.direction = ev.type;
   if(swipe2.direction == 'swiperight') {
-	swipe2.swipeLeft(ev)
+	swipe2.swipeLeft(ev, '-50px')
   }else{
   	swipe2.swipeRight(ev);
   }  
@@ -230,7 +230,7 @@ swipe3.hammertime.on('swipeleft swiperight', function(ev) {
   ev.preventDefault();
   swipe3.direction = ev.type;
   if(swipe3.direction == 'swiperight') {
-	swipe3.swipeLeft(ev)
+	swipe3.swipeLeft(ev, '-50px')
   }else{
   	swipe3.swipeRight(ev);
   }  

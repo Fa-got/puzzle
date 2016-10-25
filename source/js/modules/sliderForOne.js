@@ -20,12 +20,13 @@ Swiper.prototype.init = function(){
 }
 
 
-Swiper.prototype.swipeLeft = function(ev){
+Swiper.prototype.swipeLeft = function(ev, z){
     this.c--;
     if(this.c == 1){
       this.myElement.animate({ 'right':'800px' }, 1000, 'easeOutQuint')   
     }else if(this.c == 0){
-      this.myElement.animate({ 'right':'-50px' }, 1000, 'easeOutQuint')     
+      this.myElement.animate({ 'right':''+z+'' }, 1000, 'easeOutQuint')
+      
     }
      if(this.c <=0){
        this.c = 0; 

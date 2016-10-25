@@ -53,8 +53,8 @@ self = this;
         case 12:  
          //--12
          
-         this.marginX = 224;
-          this.marginY = 223;
+         this.marginX = 148;
+          this.marginY = 149;
           
           if(key == 0 || key == 6 ){
             $(this).addClass('v-l')
@@ -70,8 +70,8 @@ self = this;
         case 48:
 
           //--48
-          this.marginX = 112;
-          this.marginY = 112;
+          this.marginX = 73;
+          this.marginY = 74;
         if(key == 0 || key == 32 || key == 12 || key == 36 || key == 24){
             $(this).addClass('v-l')
           }else if( key == 31 || key == 47 || key == 11 || key == 35 || key == 23){
@@ -86,8 +86,8 @@ self = this;
         case 108:
 
         //--108
-        this.marginX = 74;
-        this.marginY = 73;
+        this.marginX = 49;
+        this.marginY = 48;
 
           if( key == 72 || key == 0 || key == 36 || key == 54 || key == 90 || key == 18){
             $(this).addClass('v-l')
@@ -105,8 +105,8 @@ self = this;
       switch(self.pieceImgLen) {
         case 12:  
          //--12
-          this.marginX = 224;
-          this.marginY = 223;
+          this.marginX = 148;
+          this.marginY = 149;
             // console.log(this.marginX, this.marginY, self.Dataimg, self.pieceImgLen)
           if(key == 0 || key == 8){
             $(this).addClass('v-l')
@@ -122,8 +122,8 @@ self = this;
         case 48:
 
           //--48
-          this.marginX = 112;
-          this.marginY = 112;
+          this.marginX = 73;
+          this.marginY = 74;
         if(key == 0 || key == 16 || key == 32){
             $(this).addClass('v-l')
           }else if(key == 15 || key == 31 || key == 47){
@@ -138,8 +138,8 @@ self = this;
         case 108:
 
         //--108
-        this.marginX = 74;
-        this.marginY = 73;
+        this.marginX = 49;
+        this.marginY = 48;
 
           if(key == 96 || key == 72 || key == 48 || key == 24 || key == 0){
             $(this).addClass('v-l')

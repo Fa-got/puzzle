@@ -126,7 +126,7 @@ swipe1 = new Swiper($('div.slide-wraper'));
   ev.preventDefault();
   swipe1.direction = ev.type;
   if(swipe1.direction == 'swiperight') {
-	swipe1.swipeLeft(ev)
+	swipe1.swipeLeft(ev, '-250px')
   }else{
   	swipe1.swipeRight(ev);
   }  

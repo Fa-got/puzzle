@@ -285,3 +285,25 @@ $('.congrat').find('.img-return').on('click', function () {
 	//$('article.intro').removeClass('none');
 	//$('section.game-for-one').addClass('none');
 })
+
+swipe5 = new Swiper($('.slider-duel div.slide-wraper'));
+ 
+ swipe5.hammertime.on('swipeleft swiperight', function(ev) {
+ 	// console.log(ev)
+  ev.preventDefault();
+  swipe5.direction = ev.type;
+  if(swipe5.direction == 'swiperight') {
+	swipe5.swipeLeft(ev, '-250px')
+  }else{
+  	swipe5.swipeRight(ev);
+  }  
+
+
+ });
+
+ $('.slider-duel div.arrow-left').on('click', function(){
+  	swipe5.swipeLeft()
+  })
+$('.slider-duel div.arrow-right').on('click', function(){
+  	swipe5.swipeRight();
+  })
