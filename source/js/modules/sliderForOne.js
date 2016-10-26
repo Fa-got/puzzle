@@ -12,7 +12,7 @@ Swiper = function(myElement, myOptions){
 	this.margin = parseInt(this.myElement.css('left'));
 	
 	this.init();
-    this.c = 0;
+  this.c = 0;
 	
 }
 Swiper.prototype.init = function(){

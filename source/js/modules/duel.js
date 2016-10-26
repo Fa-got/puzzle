@@ -262,8 +262,7 @@ $('.show-piece-duel-right').removeClass('active')
  	}
  })
 
-
-$('.congrat').find('.img-return').on('click', function () {
+$('.congrat-duel').find('.img-return').on('click', function () {
 	 location.reload();
 })
 
@@ -277,7 +276,6 @@ swipe5 = new Swiper($('.slider-duel div.slide-wraper'));
   }else{
   	swipe5.swipeRight(ev);
   }  
-
 
  });
 

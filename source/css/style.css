@@ -436,7 +436,7 @@ section.game-two-right  h2.time-right{
     float: right;
     font: normal 50px 'WoodenShipDecorated' !important;
     text-align: left !important;
-    margin: 40px 20px 0 0;
+    margin: 40px 0px 0 0;
 }
 section.game-duel-right  div.puzzle-duel-right,
 section.game-two-right  div.puzzle-area-right{
@@ -507,9 +507,9 @@ section.game-two-left h1 > span{
 section.game-duel-left  h2.time-left,
 section.game-two-left  h2.time{
     width: 200px;
-    float: left;
+    float: right;
     font: normal 50px 'WoodenShipDecorated';
-    margin: 30px 0 0 140px;
+    margin: 40px 0px 0 0px;
 }
 section.game-duel-left  div.puzzle-duel-left,
 section.game-two-left  div.puzzle-area-left{
@@ -578,7 +578,7 @@ section.game-one  h2.time{
 section.game-one  div.puzzle-area{
 	width: 1450px;
     height: 750px;
-    margin: 75px auto;
+    margin: 120px auto 30px auto;
 }
 
 section.game-one  nav > div{
@@ -793,4 +793,36 @@ div.img-return{
     height: 180px;
     background:  url(../img/elements/ret.png) 50% 50% no-repeat;
     margin:30px auto;
+}
+
+.img-return-in{
+    width: 90px;
+    height: 90px;
+    background-image: url(../img/elements/return.png)  ;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 90px 90px;
+    float: right;
+    margin: 40px 20px 0 0px;
+}
+.game-duel .img-return-in{
+    width: 90px;
+    height: 90px;
+    background-image: url(../img/elements/return.png)  ;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 90px 90px;
+    float: right;
+    margin: 25px 20px 0 0px;
+}
+
+.game-for-two .img-return-in{
+    width: 90px;
+    height: 90px;
+    background-image: url(../img/elements/return.png)  ;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 90px 90px;
+    float: right;
+    margin: 30px 20px 0 0px;
 }

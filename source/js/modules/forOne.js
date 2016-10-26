@@ -108,9 +108,11 @@ var start_time_interval;
 	start_time()
   });
 
+$('.img-return-in').on('click', function () {
+	 location.reload();
+})
 
-
-$('.congrat-duel').find('.img-return').on('click', function () {
+$('.congrat').find('.img-return').on('click', function () {
 	 location.reload();
 })
 

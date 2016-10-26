@@ -5,8 +5,6 @@ Timer = function(selector){
   self=this;
 }
 
-
-
 Timer.prototype.start_time = function() { 
     self.selector.html()
     var this_date = new Date();

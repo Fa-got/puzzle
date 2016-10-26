@@ -5,17 +5,17 @@ this.aria = aria;
 this.Dataimg = Dataimg;
 this.length = length;
 var marginX ;
-var  marginY;
+var marginY;
 
 this.marginX = marginX;
 this.marginY = marginY;
 
 
 this.couplMax_x ;
-   this.couplMin_x ;
-             
-   this.couplMax_y ;
-  this.couplMin_y ;
+this.couplMin_x ;
+         
+this.couplMax_y ;
+this.couplMin_y ;
 
 var piece = this.aria.find($('.group >.piece'));
 var pieceImg = this.aria.find($('.piece > img'));
@@ -23,8 +23,6 @@ var pieceImg = this.aria.find($('.piece > img'));
 this.piece = piece;
 this.pieceImg = pieceImg
 this.pieceImgLen = this.pieceImg.length
-
-
 
 self = this;
 
@@ -39,8 +37,6 @@ self = this;
   }
 }
 
-
-
   PuzzleEvent.prototype.eventPuzzle = function(){
  this.pieceImg = self.pieceImg
 
@@ -53,8 +49,7 @@ self = this;
          //--12
          
          this.marginX = 148;
-          this.marginY = 149;
-          
+          this.marginY = 149;    
           if(key == 0 || key == 6 ){
             $(this).addClass('v-l')
           }else if(key == 1 ){
@@ -106,7 +101,6 @@ self = this;
          //--12
           this.marginX = 148;
           this.marginY = 149;
-            // console.log(this.marginX, this.marginY, self.Dataimg, self.pieceImgLen)
           if(key == 0 || key == 8){
             $(this).addClass('v-l')
           }else if(key == 1 || key == 3){
@@ -139,7 +133,6 @@ self = this;
         //--108
         this.marginX = 49;
         this.marginY = 48;
-
           if(key == 96 || key == 72 || key == 48 || key == 24 || key == 0){
             $(this).addClass('v-l')
           }else if( key == 95 || key == 47 || key == 71 || key == 23 ){
@@ -360,7 +353,7 @@ PuzzleEvent.prototype.doConnect = function(elem1, elem2, direction){
       $(val).css({'margin-left': ((parseInt($(val).attr('data-column'))-arrayColumn.min()))*self.marginX+'px'});
 
       
-     langGroupTop  = arrayRow.length*self.marginY+'px';
+      langGroupTop  = arrayRow.length*self.marginY+'px';
       langGroupLeft =  arrayColumn.length*self.marginX+'px';
 
     var pieceLen = group.find('.piece').length;
@@ -369,49 +362,43 @@ PuzzleEvent.prototype.doConnect = function(elem1, elem2, direction){
       group.attr('data-lan',pieceLen)
 
       if(group.attr('data-lan') == self.length ){
-          $(group).addClass('done')
+        $(group).addClass('done')
       }
 
 
-    if($(group).hasClass('done')){
-       $(group).parent().parent().addClass('none')
-       $('span.insert-time').html($('#clock').html());
-       $('.insert-time-right').html($('#clock-right').html())
-       $('.insert-time-left').html($('#clock-left').html());
+      if($(group).hasClass('done')){
+         $(group).parent().parent().addClass('none')
+         $('span.insert-time').html($('#clock').html());
+         $('.insert-time-right').html($('#clock-right').html())
+         $('.insert-time-left').html($('#clock-left').html());
 
 
-       $(group).parents('.player-duel').find('.congrat-duel').removeClass('none');
-       if($('.div-left').hasClass('none') && $('.div-right').hasClass('none')){
-  $('.img-return').removeClass('none')
+         $(group).parents('.player-duel').find('.congrat-duel').removeClass('none');
+         if($('.div-left').hasClass('none') && $('.div-right').hasClass('none')){
+           $('.img-return').removeClass('none')
 
-}
-       if($('.game-duel-right').hasClass('none')){
-          $('.congrat-duel').removeClass('none')
-          $('span.duel-winner').html('Справа')
+         }
+         if($('.game-duel-right').hasClass('none')){
+            $('.congrat-duel').removeClass('none')
+            $('span.duel-winner').html('Справа')
 
-        }else if($('.game-duel-left').hasClass('none')){
-          $('.congrat-duel').removeClass('none')
-          $('span.duel-winner').html('Слева')
-        
-        }
+          }else if($('.game-duel-left').hasClass('none')){
+            $('.congrat-duel').removeClass('none')
+            $('span.duel-winner').html('Слева')
+          
+          }
       }
-
   })
  
   if (groupMargin[0] != parseInt($(elem1).css('margin-top'))){
-
     $(group).css({'top': parseInt($(group).css('top'))-parseInt($(elem1).css('margin-top'))+'px'})
-
   }
 
   if (groupMargin[1] != parseInt($(elem1).css('margin-left'))){
     $(group).css({'left': parseInt($(group).css('left'))-parseInt($(elem1).css('margin-left'))+'px'})
    
   }
-
   this.aria.find($('.piece[data-row="'+elem2Row+'"]')).filter('[data-column="'+elem2Column+'"]').filter('[data-connect="false"]').parent().remove()
-  
-
 }
 
 Array.prototype.min = function() {
@@ -421,11 +408,6 @@ Array.prototype.min = function() {
 Array.prototype.max = function() {
   return Math.max.apply(null, this);
 };
-
-
-
-
- 
 
 
 module.exports = PuzzleEvent;
