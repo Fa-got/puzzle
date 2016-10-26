@@ -121,7 +121,7 @@ swipe1 = new Swiper($('div.slide-wraper'));
   ev.preventDefault();
   swipe1.direction = ev.type;
   if(swipe1.direction == 'swiperight') {
-	swipe1.swipeLeft(ev, '-250px')
+	swipe1.swipeLeft('-250px',ev)
   }else{
   	swipe1.swipeRight(ev);
   }  
@@ -130,7 +130,7 @@ swipe1 = new Swiper($('div.slide-wraper'));
  });
 
  $('div.arrow-left').on('click', function(){
-  	swipe1.swipeLeft()
+  	swipe1.swipeLeft('-250px')
   })
 $('div.arrow-right').on('click', function(){
   	swipe1.swipeRight();

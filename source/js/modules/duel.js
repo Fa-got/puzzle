@@ -273,7 +273,7 @@ swipe5 = new Swiper($('.slider-duel div.slide-wraper'));
   ev.preventDefault();
   swipe5.direction = ev.type;
   if(swipe5.direction == 'swiperight') {
-	swipe5.swipeLeft(ev, '-250px')
+	swipe5.swipeLeft('-250px', ev)
   }else{
   	swipe5.swipeRight(ev);
   }  
@@ -282,7 +282,7 @@ swipe5 = new Swiper($('.slider-duel div.slide-wraper'));
  });
 
  $('.slider-duel div.arrow-left').on('click', function(){
-  	swipe5.swipeLeft()
+  	swipe5.swipeLeft('-250px')
   })
 $('.slider-duel div.arrow-right').on('click', function(){
   	swipe5.swipeRight();

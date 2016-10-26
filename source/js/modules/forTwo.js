@@ -202,7 +202,7 @@ swipe2 = new Swiper($('.slide-wraper-left'));
   ev.preventDefault();
   swipe2.direction = ev.type;
   if(swipe2.direction == 'swiperight') {
-	swipe2.swipeLeft(ev, '-50px')
+	swipe2.swipeLeft('-50px', ev)
   }else{
   	swipe2.swipeRight(ev);
   }  
@@ -211,7 +211,7 @@ swipe2 = new Swiper($('.slide-wraper-left'));
  });
 
  $('div#puzzle > section.game-for-two > div.player-right section.player-right-cont > aside.slider-right > div.arrow-left').on('click', function(){
-  	swipe3.swipeLeft()
+  	swipe3.swipeLeft('-50px')
   })
 $('div#puzzle > section.game-for-two > div.player-right section.player-right-cont > aside.slider-right > div.arrow-right').on('click', function(){
   	swipe3.swipeRight();
@@ -226,7 +226,7 @@ swipe3.hammertime.on('swipeleft swiperight', function(ev) {
   ev.preventDefault();
   swipe3.direction = ev.type;
   if(swipe3.direction == 'swiperight') {
-	swipe3.swipeLeft(ev, '-50px')
+	swipe3.swipeLeft('-50px', ev)
   }else{
   	swipe3.swipeRight(ev);
   }  
@@ -235,7 +235,7 @@ swipe3.hammertime.on('swipeleft swiperight', function(ev) {
  });
       
  $('div#puzzle > section.game-for-two > div.player-left section.player-left-cont > aside.slider-left > div.arrow-left').on('click', function(){
-  	swipe2.swipeLeft()
+  	swipe2.swipeLeft('-50px')
   })
 $('div#puzzle > section.game-for-two  > div.player-left section.player-left-cont > aside.slider-left > div.arrow-right').on('click', function(){
   	swipe2.swipeRight();
