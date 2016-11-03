@@ -669,11 +669,7 @@ nav.game-options-two-left > div.active {
      color: black;
      background-size: 100% 100%;
 }
-nav > div.shufl-right:hover{
-    background:url(../img/elements/puzzle-button-active.png);
-     color: black;
-     background-size: 100% 100%;
-}
+
 div.perv-left,
 div.perv-right,
 div.perv-duel-left,
@@ -687,10 +683,7 @@ div.perv-duel-right,
     background-position: 50% 50%;
 }
 
-div.shufl:hover{
-     background:url(../img/elements/puzzle-button-active.png);
-     color: black;
-}
+
 .index{
     /*z-index: -2 !important;*/
     left: -9999px !important;

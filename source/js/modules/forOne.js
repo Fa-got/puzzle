@@ -28,7 +28,7 @@ $('article.intro > div.button-for-one').on('click', function () {
 		}else{
 			$(this).addClass('active')
 			$('div.game-button').removeClass('none')
-			$('h1.complexity').empty().append($(this).html() + ' <span>пузелов</span>')
+			$('h1.complexity').empty().append($(this).html() + ' <span>пузелей</span>')
 		}
 
 	})
@@ -211,3 +211,9 @@ $('.show-piece').removeClass('active')
  	}
  })
 
+$('.shufl').on('touchstart', function(){
+	$(this).addClass('active')
+})
+$('.shufl').on('touchend', function(){
+	$(this).removeClass('active')
+})

@@ -27,7 +27,7 @@ $('article.intro > div.button-duel').on('click', function () {
 		}else{
 			$(this).addClass('active')
 			$('div.game-button-duel').removeClass('none')
-			$('h1.complexity').empty().append($(this).html() + ' <span>пузелов</span>')
+			$('h1.complexity').empty().append($(this).html() + ' <span>пузелей</span>')
 		}
 
 	})

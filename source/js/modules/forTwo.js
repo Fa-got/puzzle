@@ -43,7 +43,7 @@ sliderImgRight = $('aside.slider-right div.slider-img-right').find('img.puzzle-i
 		}else{
 			$(this).addClass('active')
 			$('div.game-button-left').removeClass('none')
-			$('h1.complexity-left').empty().append($(this).html() + ' <span>пузелов</span>')
+			$('h1.complexity-left').empty().append($(this).html() + ' <span>пузелей</span>')
 		}
 	})
 
@@ -56,7 +56,7 @@ sliderImgRight = $('aside.slider-right div.slider-img-right').find('img.puzzle-i
 		}else{
 			$(this).addClass('active')
 			$('div.game-button-right').removeClass('none')
-			$('h1.complexity-right').empty().append($(this).html() + ' <span>пузелов</span>')
+			$('h1.complexity-right').empty().append($(this).html() + ' <span>пузелей</span>')
 		}
 	})
 
@@ -399,4 +399,11 @@ if($('.div-left').hasClass('none') && $('.div-right').hasClass('none')){
 $('.congrat-left, .congrat-right').find('.img-return').on('click', function () {
 	 location.reload();
 	
+})
+
+$('.shufl-left, .shufl-right').on('touchstart', function(){
+	$(this).addClass('active')
+})
+$('.shufl-left, .shufl-right').on('touchend', function(){
+	$(this).removeClass('active')
 })
