@@ -29,6 +29,7 @@ div#puzzle > article.intro{
 	width: inherit;
 	height: inherit;
 	background: url(../img/bg-hand.png) 50% 50% no-repeat;
+    text-align: center;
 }
 div#puzzle > article.intro > img.menu{
 	margin: 0 50%;
@@ -36,11 +37,11 @@ div#puzzle > article.intro > img.menu{
 }
 
 div#puzzle > article.intro > img.head{
-	margin: -1% 31%;
+	margin: 0 auto;
 }
 
 div#puzzle > article.intro h1{
-	margin: 40px 0 0 470px;
+	margin: 40px 0 0;
 	font-size: 50px;
 	font-family: 'Georgia-Italic';
 }
@@ -63,7 +64,6 @@ div#puzzle > article.intro > div.button p{
 	font-family: 'WoodenShipDecorated';
 }
 div#puzzle > article.intro > p{
-    margin-left: 570px;
     font: normal 23px 'Georgia-Italic'; 
 }
 /*---------game for one---------*/
@@ -82,6 +82,11 @@ div#puzzle  img.menu{
 div#puzzle > section.game-for-one > img.menu:hover{
 	
 }
+div#puzzle > section.game-for-one > h1 {
+    margin-top: 60px;
+    margin-bottom: -10px;
+}
+
 div#puzzle > section.game-duel  h1,
 div#puzzle > section.game-duel  h2,
 div#puzzle > section.game-for-one > h1,
